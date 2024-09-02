@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+
+  <entityname.nightgoggles>Night Vision Goggles</entityname.nightgoggles>
+  <entitydescription.nightgoggles>Standard Night Vision Goggles. Requires Batteries.</entitydescription.nightgoggles>
+ 
+  <afflictionname.noeye>Eyes Removed</afflictionname.noeye>
+  <afflictiondescription.noeye>The patient's eyes have been surgically removed, with empty, red holes taking their place. Horrific.</afflictiondescription.noeye>
+
+
+  <loadingscreentip>Multiple consecutive lobotomies may have adverse effects on an individual.</loadingscreentip>
+
+</infotexts>
