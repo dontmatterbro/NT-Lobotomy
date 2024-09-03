@@ -1,5 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-
+		<!-- Orbitoclast -->
+	<Item name="" identifier="orbitoclast" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+		<PreferredContainer primary="toxcontainer" spawnprobability="1" />
+		<PreferredContainer primary="locker" />
+		<Fabricate suitablefabricators="fabricator">
+			<RequiredSkill identifier="medical" level="20" />
+			<RequiredSkill identifier="mechanical" level="15" />
+			<RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
+			<RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
+		</Fabricate>
+		<Deconstruct>
+			<Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
+		</Deconstruct>
+		<Price baseprice="75" soldbydefault="true">
+			<Price storeidentifier="merchantmedical" sold="true" />
+		</Price>
+		<InventoryIcon texture="%ModDir:Neurotrauma%/Images/InventoryItemIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="%ModDir:Neurotrauma%/Images/InGameItemIconAtlas.png" sourcerect="384,0,128,128" depth="0.55" origin="0.5,0.5" />
+		<Body width="120" height="110" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+	</Item>
+	
+		<!-- Surgical Hammer -->
+	<Item name="" identifier="surgicalhammer" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+		<PreferredContainer primary="toxcontainer" spawnprobability="1" />
+		<PreferredContainer primary="locker" />
+		<Fabricate suitablefabricators="fabricator">
+			<RequiredSkill identifier="medical" level="20" />
+			<RequiredSkill identifier="mechanical" level="15" />
+			<RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
+			<RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
+		</Fabricate>
+		<Deconstruct>
+			<Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
+		</Deconstruct>
+		<Price baseprice="35" soldbydefault="true">
+			<Price storeidentifier="merchantmedical" sold="true" />
+		</Price>
+		<InventoryIcon texture="%ModDir:Neurotrauma%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="%ModDir:Neurotrauma%/Images/InGameItemIconAtlas.png" sourcerect="0,128,128,128" depth="0.55" origin="0.5,0.5" />
+		<Body width="120" height="110" density="50" />
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+	</Item>
 
 </Items>

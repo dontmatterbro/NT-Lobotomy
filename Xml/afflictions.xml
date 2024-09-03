@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
 
+	<Affliction name="" identifier="orbitoclastready" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" showinhealthscannerthreshold="100" iconcolors="255,80,0,255;255,80,0,255">
+		<!-- <icon texture="%ModDir%/Textures/AfflictionIcons.png" sourcerect="640,0,128,128"  origin="0,0" /> -->
+	</Affliction>	
+	
+	<Affliction name="" identifier="orbitoclastinsertion" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" showinhealthscannerthreshold="100" iconcolors="255,80,0,255;255,80,0,255">
+		<!-- <icon texture="%ModDir%/Textures/AfflictionIcons.png" sourcerect="640,0,128,128"  origin="0,0" /> -->
+	</Affliction>
 
 </Afflictions>
