@@ -17,11 +17,12 @@ Timer.Wait(function()
 		--server side scripts
 	if SERVER or (CLIENT and not Game.IsMultiplayer) then
 		dofile(NTLOBO.Path.."/Lua/Scripts/Server/surgery.lua")
+		dofile(NTLOBO.Path.."/Lua/Scripts/Server/lobotomy_update.lua")
 	end
 		
 		--client side scripts
 	if CLIENT then
-		dofile(NTLOBO.Path.."/Lua/Scripts/Server/effects.lua")
+		dofile(NTLOBO.Path.."/Lua/Scripts/Client/effects.lua")
 	end
 
 

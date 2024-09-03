@@ -1,9 +1,6 @@
---Orbitoclast
---Use hammer to insert orbitoclast to skull
---doesnt require anesthesia only local numbness
 
-Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, targetCharacter, limb)
-    
+Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter, targetCharacter, limb)
+
     if -- invalid use, dont do anything
         item == nil or
         usingCharacter == nil or
@@ -13,19 +10,19 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
 	
 	local identifier = item.Prefab.Identifier
 	local limbtype = HF.NormalizeLimbType(limb.type)
-	
 	---------------------------------------SURGERY CODE--------------------------
 	
 	if not limbtype==11 then return end
 	if HF.HasAffliction(targetCharacter, "stasis") then return end 
 	
-	--frontal lobotomy
+	--transorbital lobotomy
 	if --Orbitoclast
-		identifier == "orbitoclast"
+				identifier == "orbitoclast"
+		and not HF.HasAffliction(targetCharacter, "orbitoclastready")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "orbitoclastready", 11, 3)
+		Entity.Spawner.AddItemToRemoveQueue(item) --despawn item as it is inside the patients skull
 	end
-	
 	
 	if --Hammer
 			identifier == "surgicalhammer"
@@ -38,18 +35,32 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
 			HF.AddAfflictionLimb(targetCharacter, "severepainlite", 11, 5)
 			HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100)
 		end
-		
-		HF.AddAfflictionLimb(targetCharacter, "orbitoclastinsertion", 11, 3)
+
+		NTLOBO.ApplyLobotomy(targetCharacter, prevresult)
+		HF.GiveItem(usingCharacter,"orbitoclast") --give back orbitoclast
+		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastready", 1000)
 	end
-	--need a way to shake orbitoclast after insertion. maybe player controls somehow??
-	
+--maybe add a way to remove orbitoclast??
+
+
 	--ethanol lobotomy
 	if --ethanol insertion
 			identifier == "ethanol"
-		and HF.HasAffliction(targetCharacter, "drilledbones") --bugtest this
+		and HF.HasAffliction(targetCharacter, "drilledbones") --test this, may be buggy
 	then
-		--lobotomy code here
+		NTLOBO.ApplyLobotomy(targetCharacter, prevresult)
+		Entity.Spawner.AddItemToRemoveQueue(item)
+	end
+
+
+	--lobotomy reversal
+	if --nerve insertion
+			identifier == "nervegenerators"
+		and HF.HasAffliction(targetCharacter, "drilledbones") 
+		and HF.HasAffliction(targetCharacter, "lobotomyonce")
+	then
+		HF.AddAfflictionLimb(targetCharacter, "nervegeneration", 11, 1) --this will remove lobotomies upon reaching 100%
+		Entity.Spawner.AddItemToRemoveQueue(item)
 	end
 	
-
 end)
