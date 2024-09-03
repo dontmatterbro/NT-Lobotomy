@@ -2,22 +2,24 @@ all of these will be reversible, provided the patient stays alive
 
 DONE infinite psychosis 
 DONE mute (lmao)
+CANCELLED very bright vision
+CANCELLED very dark vision
+DONE blurry vision
+DONE genius
+DONE retardation
+DONE drunk walk
+DONE death
 
 
 deaf?
 
 blind (can't see one side or full blind if really unlucky)
 
-very bright vision
-very dark vision
-blurry vision
 
-genius
-retardation
 
 infinite tinnitus
 
-death
+
 
 constantly screaming
 
@@ -28,7 +30,7 @@ nothing
 analgesia immunity
 drug insensitivity
 
-drunk walk
+
 
 paralysis
 
@@ -97,3 +99,4 @@ hear lobotomy theme
 weird skin colors
 
 
+stun resistance

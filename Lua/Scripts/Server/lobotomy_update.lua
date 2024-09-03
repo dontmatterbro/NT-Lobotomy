@@ -16,11 +16,12 @@ end)
 
 --lobotomy tables
 GoodLobotomyAfflictions = {
-	
+	"lobo_genius", 
 }	
-	
+
 BadLobotomyAfflictions = {
-	"infinitepsychosis", "mute"
+	"lobo_ungenius", "lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision"
+	
 }
 
 
@@ -71,25 +72,24 @@ end
 
 --lobotomize
 function NTLOBO.ApplyLobotomy(targetCharacter, prevresult)
-	local result=prevresult
+	local result=prevresult --in case result want to be determined beforehand
 
 	if --determine result if not already determined
 		result==nil 
 	then
 		if 
-			HF.Chance(0.07)
+			HF.Chance(0.15)
 		then
 			result="good"
 		else
 			result="bad"
 		end
 	end
+
 	
-
-
 	local BadLobotomy = BadLobotomyAfflictions[ math.random( #BadLobotomyAfflictions ) ]
 	local GoodLobotomy = GoodLobotomyAfflictions[ math.random( #GoodLobotomyAfflictions ) ]
-
+	
 
 	if --give lobotomy
 		result=="bad"
@@ -101,48 +101,26 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult)
 		print(GoodLobotomy)
 	end
 		
-	if --kill at 4th lobotomy
-		HF.HasAffliction(targetCharacter, "lobotomythrice")
-	then
-		HF.AddAfflictionLimb(targetCharacter, "cerebralhypoxia", 11, 300)
-	return end
 		
-	if --give third lobotomy affliction
-		HF.HasAffliction(targetCharacter, "lobotomytwice")
-	then
-		HF.AddAfflictionLimb(targetCharacter, "lobotomythrice", 11, 3)
-		
-		if 
-			HF.Chance(0.33)
-		then
-			HF.AddAfflictionLimb(targetCharacter, "cerebralhypoxia", 11, 300)
-		end
-	return end	
+	HF.AddAfflictionLimb(targetCharacter, "lobotomy", 11, 1) --add progress after lobotomy
 	
-	if --give second lobotomy affliction
-		HF.HasAffliction(targetCharacter, "lobotomyonce")
+	if --chance of death from lobotomy
+		HF.GetAfflictionStrength(targetCharacter, "lobotomy") <= 5
 	then
-		HF.AddAfflictionLimb(targetCharacter, "lobotomytwice", 11, 3)
-		
-		if 
-			HF.Chance(0.14)
+		if
+			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.07 )
 		then
-			HF.AddAfflictionLimb(targetCharacter, "cerebralhypoxia", 11, 300)
+			targetCharacter.Kill("Lobotomized to death", "lobotomy")
 		end
-	return end	
-
-	if --give first lobotomy affliction
-		not HF.HasAffliction(targetCharacter, "lobotomyonce")
-	then
-		HF.AddAfflictionLimb(targetCharacter, "lobotomyonce", 11, 3)
-		
-		if 
-			HF.Chance(0.07)
+	else
+		if --scales up after 5 lobotomies
+			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.12 )
 		then
-			HF.AddAfflictionLimb(targetCharacter, "cerebralhypoxia", 11, 300)
+			targetCharacter.Kill("Brutally lobotomized to death", "lobotomy")
 		end
-	return end
-
+	end
+	
+	
 end
 
 
