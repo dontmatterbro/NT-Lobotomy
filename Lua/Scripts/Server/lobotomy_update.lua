@@ -20,10 +20,10 @@ GoodLobotomyAfflictions = {
 }	
 
 BadLobotomyAfflictions = {
-	"lobo_ungenius", "lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision"
+	"lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision", "lobo_ungenius", "lobo_alwaysdrunk", "lobo_hearscreams", "lobo_tinnitus",
+	"lobo_screenshake", "lobo_deaf", "lobo_blind"
 	
 }
-
 
 function NTLOBO.UpdateLobotomy(targetCharacter)
 
@@ -134,7 +134,7 @@ function NTLOBO.Update()
 	--fetch character for update
 	for key, character in pairs(Character.CharacterList) do
 		if not character.IsDead then
-			if character.IsHuman and HF.HasAffliction(character, "lobotomyonce") then
+			if character.IsHuman and HF.HasAffliction(character, "lobotomy") then
 				table.insert(updateHuman, character)
 				amountHuman = amountHuman + 1
 			end

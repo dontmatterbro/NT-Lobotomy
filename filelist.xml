@@ -3,4 +3,10 @@
 	<Afflictions file="%ModDir%/Xml/afflictions.xml" />
 	<Item file="%ModDir%/Xml/items.xml" />
 	<Text file="%ModDir%/Localization/English.xml" />
+	<Other file="%ModDir%/Sounds/scream_female_1.ogg" />
+	<Other file="%ModDir%/Sounds/scream_female_2.ogg" />
+	<Other file="%ModDir%/Sounds/scream_male_1.ogg" />
+	<Other file="%ModDir%/Sounds/scream_male_2.ogg" />
+	<Other file="%ModDir%/Sounds/scream_male_3.ogg" />
+	<Other file="%ModDir%/Sounds/tinnitus.ogg" />
 </contentpackage>

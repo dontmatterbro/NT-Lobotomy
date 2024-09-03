@@ -9,21 +9,18 @@ DONE genius
 DONE retardation
 DONE drunk walk
 DONE death
+DONE infinite tinnitus (fucking awful)
+DONE hearing constant screams
+DONE deaf? (check lowpassmultiplier status effect)
+DONE blind (can't see one side or full blind if really unlucky)
+DONE screen shakes forever (lmao)
 
-
-deaf?
-
-blind (can't see one side or full blind if really unlucky)
-
-
-
-infinite tinnitus
 
 
 
 constantly screaming
 
-hearing constant screams
+
 
 nothing
 
@@ -62,7 +59,7 @@ very fast walk speed
 very slow swim speed
 very fast swim speed
 
-screen shakes forever (lmao)
+
 
 random rgb lights forever
 
@@ -98,5 +95,16 @@ hear lobotomy theme
 
 weird skin colors
 
-
 stun resistance
+
+
+
+Reduce nt gain
+
+Unlock random talent
+
+psychosis
+
+drunk resistance
+
+Lack of traumatic shock

@@ -14,22 +14,19 @@
 		<!-- <icon texture="%ModDir%/Textures/AfflictionIcons.png" sourcerect="640,0,128,128"  origin="0,0" /> -->
 	</Affliction>	
 	
+	
 			<!-- Lobotomy effect afflictions -->
 			
+		<!-- Bad Afflictions -->
+		
 	<Affliction name="" identifier="lobo_infinitepsychosis" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-		<!-- <icon texture="%ModDir%/Textures/AfflictionIcons.png" sourcerect="640,0,128,128"  origin="0,0" /> -->
 	</Affliction>	
 	
 	<Affliction name="" identifier="lobo_mute" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-		<!-- <icon texture="%ModDir%/Textures/AfflictionIcons.png" sourcerect="640,0,128,128"  origin="0,0" /> -->
 	</Affliction>	
 	
 	<Affliction name="" identifier="lobo_blurredvision" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
 		<Effect minstrength="0" maxstrength="2" minscreenblur="0.0" maxscreenblur="1.0" />
-	</Affliction>	
-	
-	<Affliction name="" identifier="lobo_genius" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-		<Effect minstrength="0" maxstrength="2" minskillmultiplier="0" maxskillmultiplier="2.5" />
 	</Affliction>	
 	
 	<Affliction name="" identifier="lobo_ungenius" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -45,7 +42,52 @@
 		</Effect>
 	</Affliction>
 	
+	<Affliction name="" identifier="lobo_hearscreams" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+		<PeriodicEffect mininterval="10" maxinterval="40">
+			<StatusEffect target="Character" duration="30" >
+				<Conditional IsLocalPlayer="True"/>
+				<Sound file="%ModDir%/Sounds/scream_female_1.ogg" dontmuffle="true" />
+				<Sound file="%ModDir%/Sounds/scream_female_2.ogg" dontmuffle="true" />
+				<Sound file="%ModDir%/Sounds/scream_male_1.ogg" dontmuffle="true" />
+				<Sound file="%ModDir%/Sounds/scream_male_2.ogg" dontmuffle="true" />
+				<Sound file="%ModDir%/Sounds/scream_male_3.ogg" dontmuffle="true" />
+			</StatusEffect>
+		</PeriodicEffect>
+	</Affliction>	
 	
+	<Affliction name="" identifier="lobo_tinnitus" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+		<Effect minstrength="0" maxstrength="2" >
+			<StatusEffect target="Character" duration="5" >
+				<Conditional IsLocalPlayer="True"/>
+				<Sound file="%ModDir%/Sounds/tinnitus.ogg" loop="true" volume="0.5" dontmuffle="true" />
+			</StatusEffect>
+		</Effect>
+	</Affliction>	
+	
+	<Affliction name="" identifier="lobo_screenshake" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+		<Effect minstrength="0" maxstrength="2" >
+			<StatusEffect target="Character" targetlimb="Head">
+				<Conditional IsLocalPlayer="True" />
+				<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="4" camerashakerange="250" />
+			</StatusEffect>
+		</Effect>
+	</Affliction>
+	
+	<Affliction name="" identifier="lobo_deaf" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	</Affliction>		
+	
+	<Affliction name="" identifier="lobo_blind" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	</Affliction>	
+	
+	
+	
+	
+	
+	
+		<!-- Good Afflictions -->
+	<Affliction name="" identifier="lobo_genius" description=""  limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+		<Effect minstrength="0" maxstrength="2" minskillmultiplier="0" maxskillmultiplier="2.5" />
+	</Affliction>	
 		
 
 </Afflictions>
