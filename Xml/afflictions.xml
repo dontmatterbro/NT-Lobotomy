@@ -2,23 +2,39 @@
 <Afflictions>
   
 			<!-- Lobotomy surgery afflictions -->
-  <Affliction name="Orbitoclast Placed" identifier="orbitoclastready" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,80,0,255;255,80,0,255">
+  <Affliction name="Orbitoclast Placed" identifier="orbitoclastready" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="35" />
-    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="240,244,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="128,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Lobotomization" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,80,0,255;255,80,0,255">
+  <Affliction name="Lobotomization" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="20">
       <StatusEffect target="Character" interval="1" disabledeltatime="true">
         <Conditional orbitoclastspin="gteq 99" />
         <LuaHook name="lobotomize" custom="Character" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="320,256,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,128,128,128" origin="0,0" />
+  </Affliction>  
+  
+  <Affliction name="Ethanol Lobotomization" identifier="ethanollobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+    <Effect minstrength="0" maxstrength="100" strengthchange="20">
+		<StatusEffect target="Character" interval="1" disabledeltatime="true">
+			<Conditional ethanollobotomy="gteq 99" />
+			<LuaHook name="lobotomize" custom="Character" />
+		</StatusEffect>
+	</Effect>
+    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="0,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Nerve Generation" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="245,224,128,128" origin="0,0" />
+  <Affliction name="Nerve Generation" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,255,255,255;0,255,50,255">
+	<Effect minstrength="0" maxstrength="100" strengthchange="20">
+		<StatusEffect target="Character" interval="1" disabledeltatime="true">
+			<Conditional orbitoclastspin="gteq 99" />
+			<LuaHook name="nerveregen" custom="Character" />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,128,128,128" origin="0,0" />
   </Affliction>
   
   <Affliction name="Lobotomized" identifier="lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="10" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,255,255,255;255,255,255,255;255,100,0,255;255,0,0,255">
@@ -27,7 +43,7 @@
 	<Effect minstrength="5" maxstrength="10"/>
   </Affliction>
   
-  <Affliction name="Lobotomized to death" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomy" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,80,0,255;255,80,0,255">
+  <Affliction name="Lobotomized to death" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomy" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,0,0,255;255,0,0,255">
     <Effect minstrength="0" maxstrength="2" minvitalitydecrease="0.0" maxvitalitydecrease="1000" />
   </Affliction>
   

@@ -47,7 +47,7 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 			identifier == "ethanol"
 		and HF.HasAffliction(targetCharacter, "drilledbones") --test this, may be buggy
 	then
-		NTLOBO.ApplyLobotomy(targetCharacter, nil)
+		HF.AddAfflictionLimb(targetCharacter, "ethanollobotomy", 11, 1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter) 
 		Entity.Spawner.AddItemToRemoveQueue(item)
 	end
 
@@ -69,12 +69,28 @@ Hook.Add("lobotomize", function(effect, deltaTime, item, targets, worldPosition,
 
 	for k, targetCharacter in pairs(targets) do
 		if 
-			HF.HasAffliction(targetCharacter, "orbitoclastspin", 90)
+			   HF.HasAffliction(targetCharacter, "orbitoclastspin", 90)
+			or HF.HasAffliction(targetCharacter, "ethanollobotomy", 90)
 		then
 			NTLOBO.ApplyLobotomy(targetCharacter, nil)
 				
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastspin", 1000)
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastready", 1000)
+			
+			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("ethanollobotomy", 1000)
+		end
+	end
+
+end)
+
+Hook.Add("nerveregen", function(effect, deltaTime, item, targets, worldPosition, element)
+
+	for k, targetCharacter in pairs(targets) do
+		if 
+			HF.HasAffliction(targetCharacter, "nervegeneration", 90)
+		then
+			print("where the fuck is my code????")
+			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
 		end
 	end
 
