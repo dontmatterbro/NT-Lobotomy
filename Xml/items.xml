@@ -1,70 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-		<!-- Orbitoclast -->
-	<Item name="" identifier="orbitoclast" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-		<PreferredContainer primary="toxcontainer" spawnprobability="1" />
-		<PreferredContainer primary="locker" />
-		<Fabricate suitablefabricators="fabricator">
-			<RequiredSkill identifier="medical" level="20" />
-			<RequiredSkill identifier="mechanical" level="15" />
-			<RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
-			<RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
-		</Fabricate>
-		<Deconstruct>
-			<Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
-		</Deconstruct>
-		<Price baseprice="75" soldbydefault="true">
-			<Price storeidentifier="merchantmedical" sold="true" />
-		</Price>
-		<InventoryIcon texture="%ModDir:Neurotrauma%/Images/InventoryItemIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
-		<Sprite texture="%ModDir:Neurotrauma%/Images/InGameItemIconAtlas.png" sourcerect="384,0,128,128" depth="0.55" origin="0.5,0.5" />
-		<Body width="120" height="110" density="50" />
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
-		<SkillRequirementHint identifier="medical" level="60" />
-	</Item>
-	
-		<!-- Surgical Hammer -->
-	<Item name="" identifier="surgicalhammer" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-		<PreferredContainer primary="toxcontainer" spawnprobability="1" />
-		<PreferredContainer primary="locker" />
-		<Fabricate suitablefabricators="fabricator">
-			<RequiredSkill identifier="medical" level="20" />
-			<RequiredSkill identifier="mechanical" level="15" />
-			<RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
-			<RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
-		</Fabricate>
-		<Deconstruct>
-			<Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
-		</Deconstruct>
-		<Price baseprice="35" soldbydefault="true">
-			<Price storeidentifier="merchantmedical" sold="true" />
-		</Price>
-		<InventoryIcon texture="%ModDir:Neurotrauma%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
-		<Sprite texture="%ModDir:Neurotrauma%/Images/InGameItemIconAtlas.png" sourcerect="0,128,128,128" depth="0.55" origin="0.5,0.5" />
-		<Body width="120" height="110" density="50" />
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
-		<SkillRequirementHint identifier="medical" level="60" />
-	</Item>
-
-		<!-- Nerve Generators -->
-	<Item name="" identifier="nervegenerators" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="8" description="" scale="0.2" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="mediccrate" impacttolerance="5.5" Tags="smallitem,medical,surgery">
-		<PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" spawnprobability="0.001" />
-		<Sprite texture="%ModDir%/Textures/ItemIcons.png" sourcerect="768,896,128,128" depth="0.6" origin="0.5,0.5" />
-		<Body width="14" height="22" density="10" />
-		<Fabricate suitablefabricators="medicalfabricator" requiredtime="14">
-			<RequiredSkill identifier="medical" level="60" />
-			<RequiredItem identifier="potassium" />
-			<RequiredItem identifier="organicfiber" amount="2" />
-		</Fabricate>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
-			<StatusEffect type="OnUse" target="This">
-				<Sound file="%ModDir:Neurotrauma%/Sound/hypospray.ogg" range="500" />
-			</StatusEffect>
-			<StatusEffect type="OnBroken" target="This">
-				<Remove />
-			</StatusEffect>
-		</MeleeWeapon>
-		<SkillRequirementHint identifier="medical" level="50" />
-	  </Item>
-
+  <!-- Orbitoclast -->
+  <Item name="" identifier="orbitoclast" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <PreferredContainer primary="toxcontainer" spawnprobability="1" />
+    <PreferredContainer primary="locker" />
+    <Fabricate suitablefabricators="fabricator">
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
+      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
+    </Fabricate>
+    <Deconstruct>
+      <Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
+    </Deconstruct>
+    <Price baseprice="75" soldbydefault="true">
+      <Price storeidentifier="merchantmedical" sold="true" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="128,0,128,128" depth="0.55" origin="0.5,0.5" />
+    <Body width="120" height="110" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0" />
+    <SkillRequirementHint identifier="medical" level="60" />
+  </Item>
+  <!-- Surgical Hammer -->
+  <Item name="" identifier="surgicalhammer" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <PreferredContainer primary="toxcontainer" spawnprobability="1" />
+    <PreferredContainer primary="locker" />
+    <Fabricate suitablefabricators="fabricator">
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true" />
+      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true" />
+    </Fabricate>
+    <Deconstruct>
+      <Item identifier="zinc" mincondition="0.1" outcondition="0.25" />
+    </Deconstruct>
+    <Price baseprice="35" soldbydefault="true">
+      <Price storeidentifier="merchantmedical" sold="true" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="0,0,128,128" depth="0.55" origin="0.5,0.5" />
+    <Body width="120" height="110" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0" />
+    <SkillRequirementHint identifier="medical" level="60" />
+  </Item>
+  <!-- Nerve Generators -->
+  <Item name="" identifier="nervegenerators" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="8" description="" scale="0.2" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="mediccrate" impacttolerance="5.5" Tags="smallitem,medical,surgery">
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" spawnprobability="0.001" />
+    <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="14" height="22" density="10" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="14">
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem identifier="potassium" />
+      <RequiredItem identifier="organicfiber" amount="2" />
+    </Fabricate>
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect type="OnUse" target="This">
+        <Sound file="%ModDir:Neurotrauma%/Sound/hypospray.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="medical" level="50" />
+  </Item>
 </Items>

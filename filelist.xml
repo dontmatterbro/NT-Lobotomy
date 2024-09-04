@@ -9,4 +9,5 @@
 	<Other file="%ModDir%/Sounds/scream_male_2.ogg" />
 	<Other file="%ModDir%/Sounds/scream_male_3.ogg" />
 	<Other file="%ModDir%/Sounds/tinnitus.ogg" />
+	<Other file="%ModDir%/Textures/SpriteSheet.png" />
 </contentpackage>
