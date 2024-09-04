@@ -11,7 +11,10 @@
   <afflictiondescription.lobotomy>Lmao.</afflictiondescription.lobotomy>  
   
   <afflictioncauseofdeath.lobotomy>Lobotomized to death.</afflictioncauseofdeath.lobotomy>  
-  <afflictioncauseofdeathself.lobotomy>You got lobotomized to death.</afflictioncauseofdeathself.lobotomy>
+  <afflictioncauseofdeathself.lobotomy>You got lobotomized to death.</afflictioncauseofdeathself.lobotomy>  
+  
+  <afflictioncauseofdeath.lobo_paralysis>Couldn't stand the hardships of life.</afflictioncauseofdeath.lobo_paralysis> 
+  <afflictioncauseofdeathself.lobo_paralysis>You couldn't stand the hardships of life..</afflictioncauseofdeathself.lobo_paralysis>
 
   <loadingscreentip>Multiple consecutive lobotomies may have adverse effects on an individual.</loadingscreentip>
 

@@ -16,12 +16,14 @@ end)
 
 --lobotomy tables
 GoodLobotomyAfflictions = {
-	"lobo_genius", 
+	"lobo_genius", "lobo_veryfast"
 }	
 
 BadLobotomyAfflictions = {
 	"lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision", "lobo_ungenius", "lobo_alwaysdrunk", "lobo_hearscreams", "lobo_tinnitus",
-	"lobo_screenshake", "lobo_deaf", "lobo_blind", "lobo_constantpain"
+	"lobo_screenshake", "lobo_deaf", "lobo_blind", "lobo_constantpain", "lobo_paralysis", "lobo_invertcontrols", "lobo_nausea", "lobo_alwaysvigorous",
+	"lobo_alwaysjolly", "lobo_differentteam", "lobo_veryslow", "lobo_alwaysrun", "lobo_randomarrest"
+	
 	
 }
 
@@ -64,6 +66,26 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		targetCharacter.CanSpeak=false
 	end		
 	
+	if --paralysis
+		HF.HasAffliction(targetCharacter, "lobo_paralysis")
+	then
+		HF.AddAfflictionLimb(targetCharacter, "givein", 11, 1)
+	end			
+	
+	if --nausea
+			HF.HasAffliction(targetCharacter, "lobo_nausea")
+		and HF.Chance(0.2)
+	then
+		HF.AddAfflictionLimb(targetCharacter, "nausea", 11, 20)
+	end		
+	
+	if --random respiratory arrest
+			HF.HasAffliction(targetCharacter, "lobo_randomarrest")
+		and HF.Chance(0.5)
+	then
+		HF.AddAfflictionLimb(targetCharacter, "respiratoryarrest", 12, 100)
+	end		
+	
 	if --always in pain
 				HF.HasAffliction(targetCharacter, "lobo_constantpain")
 		and not HF.HasAffliction(targetCharacter, "analgesia")
@@ -74,9 +96,18 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 3, 100) --left arm
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 8, 100) --right leg
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 7, 100) --left leg
+	end	
+	
+	if --always run
+		HF.HasAffliction(targetCharacter, "lobo_alwaysrun")
+	then 
+		targetCharacter.ForceRun=true
+	else
+		targetCharacter.ForceRun=false
 	end
-		
-
+	
+	
+	
 end
 
 

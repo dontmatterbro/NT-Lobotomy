@@ -1,9 +1,12 @@
 all of these will be reversible, provided the patient stays alive
 
-DONE infinite psychosis 
-DONE mute (lmao)
 CANCELLED very bright vision
 CANCELLED very dark vision
+CANCELLED leg paralysis -> always crawl / lose a random leg
+CANCELLED hand paralysis -> lose a random hand
+
+DONE infinite psychosis 
+DONE mute (lmao)
 DONE blurry vision
 DONE genius
 DONE retardation
@@ -15,79 +18,46 @@ DONE deaf? (check lowpassmultiplier status effect)
 DONE blind (can't see one side or full blind if really unlucky)
 DONE screen shakes forever (lmao)
 DONE constant pain everywhere forever (ouch)
+DONE paralysis
+DONE invert controls (lmao)
+DONE always vomit
+DONE jolly walk
+DONE igorous walk (idk wtf this is)
+DONE different team forever
+DONE very slow walk speed
+DONE very fast walk speed
+DONE always run
+DONE unable to breath (big lmao)
 
 
 
 constantly screaming
-
-
-
 nothing
-
 analgesia immunity
 drug insensitivity
-
-
-
-paralysis
-
-leg paralysis -> always crawl / lose a random leg
-
-hand paralysis -> lose a random hand
-
 very close vision
 very far vision (EI and NTEYE comp needed, maybe just disable this one if those are activated)
-
-reversed controls (lmao)
-
 upside down screen (if possible lmao)
-
-
 constant pain on a random limb
-
 death (again lmao)
 
-unable to breath (big lmao)
-
 random blackouts (loss of consciousness)
-
 infinite coma
-
-very slow walk speed
-very fast walk speed
-
 very slow swim speed
 very fast swim speed
-
-
-
 random rgb lights forever
-
 can't see hud (inventory or some shit idk if this is probable)
-
 can't see names
-
-different team forever
-
 can't wear clothes (lmao)
-
 always farts
-
 blood vision
-
 random tf2 medic jumpscares (very rare)
-
 can't use health interface (lmao if doc)
+idk if possible always crouch
 
-always crouch
 
-always run
 
-jolly walk
 
-always vomit
-
-vigorous walk (idk wtf this is)
 
 random anemia
 
@@ -95,15 +65,17 @@ hear lobotomy theme
 
 weird skin colors
 
+
+
+
+
 stun resistance
-
-
 
 Reduce nt gain
 
 Unlock random talent
 
-psychosis
+psychosis resistance
 
 drunk resistance
 
