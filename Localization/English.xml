@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
-  <entityname.nightgoggles>Night Vision Goggles</entityname.nightgoggles>
-  <entitydescription.nightgoggles>Standard Night Vision Goggles. Requires Batteries.</entitydescription.nightgoggles>
+  <entityname.orbitoclast>Orbitoclast</entityname.orbitoclast>
+  <entitydescription.orbitoclast>Description here.</entitydescription.orbitoclast>  
+  
+  <entityname.surgicalhammer>Surgical hammer</entityname.surgicalhammer>
+  <entitydescription.surgicalhammer>Description here.</entitydescription.surgicalhammer>
  
-  <afflictionname.noeye>Eyes Removed</afflictionname.noeye>
-  <afflictiondescription.noeye>The patient's eyes have been surgically removed, with empty, red holes taking their place. Horrific.</afflictiondescription.noeye>
-
+  <afflictionname.lobotomy>Lobotomized</afflictionname.lobotomy>
+  <afflictiondescription.lobotomy>Lmao.</afflictiondescription.lobotomy>  
+  
+  <afflictioncauseofdeath.lobotomy>Lobotomized to death.</afflictioncauseofdeath.lobotomy>  
+  <afflictioncauseofdeathself.lobotomy>You got lobotomized to death.</afflictioncauseofdeathself.lobotomy>
 
   <loadingscreentip>Multiple consecutive lobotomies may have adverse effects on an individual.</loadingscreentip>
 

@@ -39,9 +39,7 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 	then
 		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
 		
-		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomyonce", 1000)
-		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomytwice", 1000)
-		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomythrice", 1000)
+		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomy", 1000)
 		
 		for RemoveGoodLobotomy in GoodLobotomyAfflictions do
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs(RemoveGoodLobotomy, 1000)
@@ -67,60 +65,6 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 	end	
 		
 
-end
-
-
---lobotomize
-function NTLOBO.ApplyLobotomy(targetCharacter, prevresult)
-	local result=prevresult --in case result want to be determined beforehand
-
-	if --determine result if not already determined
-		result==nil 
-	then
-		if 
-			HF.Chance(0.15)
-		then
-			result="good"
-		else
-			result="bad"
-		end
-	end
-
-	
-	local BadLobotomy = BadLobotomyAfflictions[ math.random( #BadLobotomyAfflictions ) ]
-	local GoodLobotomy = GoodLobotomyAfflictions[ math.random( #GoodLobotomyAfflictions ) ]
-	
-
-	if --give lobotomy
-		result=="bad"
-	then
-		HF.AddAfflictionLimb(targetCharacter, BadLobotomy, 11, 3)
-		print(BadLobotomy)
-	else
-		HF.AddAfflictionLimb(targetCharacter, GoodLobotomy, 11, 3)
-		print(GoodLobotomy)
-	end
-		
-		
-	HF.AddAfflictionLimb(targetCharacter, "lobotomy", 11, 1) --add progress after lobotomy
-	
-	if --chance of death from lobotomy
-		HF.GetAfflictionStrength(targetCharacter, "lobotomy") <= 5
-	then
-		if
-			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.07 )
-		then
-			targetCharacter.Kill("Lobotomized to death", "lobotomy")
-		end
-	else
-		if --scales up after 5 lobotomies
-			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.12 )
-		then
-			targetCharacter.Kill("Brutally lobotomized to death", "lobotomy")
-		end
-	end
-	
-	
 end
 
 
