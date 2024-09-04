@@ -21,7 +21,7 @@ GoodLobotomyAfflictions = {
 
 BadLobotomyAfflictions = {
 	"lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision", "lobo_ungenius", "lobo_alwaysdrunk", "lobo_hearscreams", "lobo_tinnitus",
-	"lobo_screenshake", "lobo_deaf", "lobo_blind"
+	"lobo_screenshake", "lobo_deaf", "lobo_blind", "lobo_constantpain"
 	
 }
 
@@ -62,7 +62,19 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		HF.HasAffliction(targetCharacter, "mute")
 	then
 		targetCharacter.CanSpeak=false
-	end	
+	end		
+	
+	if --always in pain
+				HF.HasAffliction(targetCharacter, "lobo_constantpain")
+		and not HF.HasAffliction(targetCharacter, "analgesia")
+	then
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100) --head
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 12, 100) --torso
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 4, 100) --right arm
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 3, 100) --left arm
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 8, 100) --right leg
+		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 7, 100) --left leg
+	end
 		
 
 end

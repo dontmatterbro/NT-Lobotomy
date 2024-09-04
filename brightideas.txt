@@ -14,7 +14,7 @@ DONE hearing constant screams
 DONE deaf? (check lowpassmultiplier status effect)
 DONE blind (can't see one side or full blind if really unlucky)
 DONE screen shakes forever (lmao)
-
+DONE constant pain everywhere forever (ouch)
 
 
 
@@ -42,7 +42,7 @@ reversed controls (lmao)
 
 upside down screen (if possible lmao)
 
-constant pain everywhere forever (ouch)
+
 constant pain on a random limb
 
 death (again lmao)
