@@ -6,7 +6,7 @@ GoodLobotomyAfflictions = {
 BadLobotomyAfflictions = {
 	"lobo_infinitepsychosis", "lobo_mute", "lobo_blurredvision", "lobo_ungenius", "lobo_alwaysdrunk", "lobo_hearscreams", "lobo_tinnitus",
 	"lobo_screenshake", "lobo_deaf", "lobo_blind", "lobo_constantpain", "lobo_paralysis", "lobo_invertcontrols", "lobo_nausea", "lobo_alwaysvigorous",
-	"lobo_alwaysjolly", "lobo_differentteam", "lobo_veryslow", "lobo_alwaysrun", "lobo_randomarrest"
+	"lobo_alwaysjolly", "lobo_differentteam", "lobo_veryslow", "lobo_alwaysrun", "lobo_randomarrest", "lobo_makescreams"
 	
 	
 }
@@ -68,7 +68,7 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 	if --nerve insertion
 			identifier == "nervegenerators"
 		and HF.HasAffliction(targetCharacter, "drilledbones") 
-		and HF.HasAffliction(targetCharacter, "lobotomyonce")
+		and HF.HasAffliction(targetCharacter, "lobotomy")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "nervegeneration", 11, 1) --this will remove lobotomies upon reaching 100%
 		Entity.Spawner.AddItemToRemoveQueue(item)

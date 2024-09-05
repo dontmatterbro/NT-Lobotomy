@@ -85,7 +85,7 @@
         <Sound file="%ModDir%/Sounds/scream_male_3.ogg" dontmuffle="true" />
       </StatusEffect>
     </PeriodicEffect>
-  </Affliction>
+  </Affliction>  
   
   <Affliction name="" identifier="lobo_tinnitus" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <Effect minstrength="0" maxstrength="2">
@@ -156,6 +156,21 @@
   <Affliction name="" identifier="lobo_randomarrest" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
   </Affliction>
   
+  <Affliction name="" identifier="lobo_makescreams" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <PeriodicEffect mininterval="10" maxinterval="25">
+      <StatusEffect target="Character" duration="30">
+		<Conditional hasspecifiertag="female"/>
+        <Sound file="%ModDir%/Sounds/scream_female_1.ogg" />
+        <Sound file="%ModDir%/Sounds/scream_female_2.ogg" dontmuffle="true" />
+      </StatusEffect>      
+	  <StatusEffect target="Character" duration="30">
+  		<Conditional hasspecifiertag="male"/>
+        <Sound file="%ModDir%/Sounds/scream_male_1.ogg" />
+        <Sound file="%ModDir%/Sounds/scream_male_2.ogg" />
+        <Sound file="%ModDir%/Sounds/scream_male_3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
   
   
 		<!-- Good Afflictions -->
