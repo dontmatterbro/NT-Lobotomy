@@ -32,8 +32,8 @@ function NTLOBO.UpdateClientEffect()
 		Character.Controlled.ForceRun=true
 	else
 		Character.Controlled.ForceRun=false
-	end
-		
+	end	
+
 end
 
 --tick effects (sorry potato pc users, idk if there is simpler way to do this, there probably is tho)

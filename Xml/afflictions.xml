@@ -28,9 +28,9 @@
   </Affliction>
   
   <Affliction name="Nerve Generation" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,255,255,255;0,255,50,255">
-	<Effect minstrength="0" maxstrength="100" strengthchange="20">
+	<Effect minstrength="0" maxstrength="100" strengthchange="5">
 		<StatusEffect target="Character" interval="1" disabledeltatime="true">
-			<Conditional orbitoclastspin="gteq 99" />
+			<Conditional nervegeneration="gteq 99" />
 			<LuaHook name="nerveregen" custom="Character" />
 		</StatusEffect>
 	</Effect>
@@ -76,7 +76,7 @@
   
   <Affliction name="" identifier="lobo_hearscreams" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <PeriodicEffect mininterval="10" maxinterval="40">
-      <StatusEffect target="Character" duration="30">
+      <StatusEffect target="Character" duration="5">
         <Conditional IsLocalPlayer="True" />
         <Sound file="%ModDir%/Sounds/scream_female_1.ogg" dontmuffle="true" />
         <Sound file="%ModDir%/Sounds/scream_female_2.ogg" dontmuffle="true" />
@@ -142,10 +142,6 @@
   <Affliction name="" identifier="lobo_differentteam" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
   </Affliction>
   
-  <Affliction name="" identifier="lobo_veryfast" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-    <Effect minstrength="0" maxstrength="2" minspeedmultiplier="1.0" maxspeedmultiplier="1.35" />
-  </Affliction>
-  
   <Affliction name="" identifier="lobo_veryslow" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <Effect minstrength="0" maxstrength="2" minspeedmultiplier="1.0" maxspeedmultiplier="0.65" />
   </Affliction>
@@ -158,10 +154,10 @@
   
   <Affliction name="" identifier="lobo_makescreams" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <PeriodicEffect mininterval="10" maxinterval="25">
-      <StatusEffect target="Character" duration="30">
+      <StatusEffect target="Character" duration="5">
 		<Conditional hasspecifiertag="female"/>
         <Sound file="%ModDir%/Sounds/scream_female_1.ogg" />
-        <Sound file="%ModDir%/Sounds/scream_female_2.ogg" dontmuffle="true" />
+        <Sound file="%ModDir%/Sounds/scream_female_2.ogg" />
       </StatusEffect>      
 	  <StatusEffect target="Character" duration="30">
   		<Conditional hasspecifiertag="male"/>
@@ -170,13 +166,108 @@
         <Sound file="%ModDir%/Sounds/scream_male_3.ogg" />
       </StatusEffect>
     </PeriodicEffect>
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_fart" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <PeriodicEffect mininterval="10" maxinterval="25">
+      <StatusEffect target="Character" duration="3">
+        <Sound file="%ModDir%/Sounds/fart1.ogg" />
+        <Sound file="%ModDir%/Sounds/fart2.ogg" />
+      </StatusEffect>      
+    </PeriodicEffect>
   </Affliction>
   
+  <Affliction name="" identifier="lobo_randomuncon" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_noanalgesia" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2" resistancefor="analgesia" minresistance="0" maxresistance="1"/> 
+  </Affliction>
+
+	<!-- Durden -->
+  <Affliction identifier="lobo_durden" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
+	<PeriodicEffect mininterval="10" maxinterval="25">
+		<StatusEffect target="Character">
+			<Affliction identifier="lobo_durden1" strength="100" />
+		</StatusEffect>	
+	</PeriodicEffect>
+	<PeriodicEffect mininterval="25" maxinterval="45">
+		<StatusEffect target="Character">
+			<Affliction identifier="lobo_durden2" strength="100" />
+		</StatusEffect>	
+	</PeriodicEffect>
+	<PeriodicEffect mininterval="60" maxinterval="90">		
+		<StatusEffect target="Character">
+			<Affliction identifier="lobo_durden3" strength="100" />
+		</StatusEffect>	
+	</PeriodicEffect>
+	<PeriodicEffect mininterval="30" maxinterval="60">		
+		<StatusEffect target="Character">
+			<Affliction identifier="lobo_durden4" strength="100" />
+		</StatusEffect>
+	</PeriodicEffect>
+  </Affliction>
+
+  <Affliction identifier="lobo_durden1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden1.png" />
+  </Affliction>  
+  
+  <Affliction identifier="lobo_durden2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden2.png" />
+  </Affliction>  
+  
+  <Affliction identifier="lobo_durden3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden3.png" />
+  </Affliction>  
+  
+  <Affliction identifier="lobo_durden4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden4.png" />
+  </Affliction>
   
 		<!-- Good Afflictions -->
   
   <Affliction name="" identifier="lobo_genius" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <Effect minstrength="0" maxstrength="2" minskillmultiplier="0" maxskillmultiplier="2.5" />
   </Affliction>
+  
+  <Affliction name="" identifier="lobo_veryfast" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="2" minspeedmultiplier="1.0" maxspeedmultiplier="1.35" />
+  </Affliction>
+  
+  <Affliction name="" identifier="lobo_notrauma" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2" resistancefor="traumaticshock" minresistance="0" maxresistance="1"/> 
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_nopsychosis" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2" resistancefor="psychosis" minresistance="0" maxresistance="1"/> 
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_nostun" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2" resistancefor="stun" minresistance="0" maxresistance="1"/> 
+  </Affliction>   
+  
+  <Affliction name="" identifier="lobo_nopain" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2"> 
+        <StatusEffect target="Character">
+          <ReduceAffliction type="pain" amount="100" />
+        </StatusEffect>
+	</Effect>
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_noneurotrauma" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2"> 
+		<StatusEffect target="Character">
+			<ReduceAffliction identifier="cerebralhypoxia" amount="1" />
+		</StatusEffect>
+	</Effect>
+  </Affliction> 
+
+  <Affliction name="" identifier="lobo_nodrunk" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2" resistancefor="drunk" minresistance="0" maxresistance="1"/> 
+  </Affliction> 
   
 </Afflictions>

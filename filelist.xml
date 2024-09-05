@@ -9,5 +9,11 @@
 	<Other file="%ModDir%/Sounds/scream_male_2.ogg" />
 	<Other file="%ModDir%/Sounds/scream_male_3.ogg" />
 	<Other file="%ModDir%/Sounds/tinnitus.ogg" />
+	<Other file="%ModDir%/Sounds/fart1.ogg" />
+	<Other file="%ModDir%/Sounds/fart2.ogg" />
 	<Other file="%ModDir%/Textures/SpriteSheet.png" />
+	<Other file="%ModDir%/Textures/Overlays/durden1.png" />
+	<Other file="%ModDir%/Textures/Overlays/durden2.png" />
+	<Other file="%ModDir%/Textures/Overlays/durden3.png" />
+	<Other file="%ModDir%/Textures/Overlays/durden4.png" />
 </contentpackage>

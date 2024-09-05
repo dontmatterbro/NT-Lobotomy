@@ -16,29 +16,6 @@ end)
 
 function NTLOBO.UpdateLobotomy(targetCharacter)
 
----------------------------------------------------------INITAL AFFLICTIONS-------------------------------------------------------
-	if --nerve generation tick, (idk if there is a cooler way to do this)
-		HF.HasAffliction(targetCharacter, "nervegeneration")
-	then
-		HF.AddAfflictionLimb(targetCharacter, "nervegeneration", 11, 5)
-	end
-	
-	if --remove lobotomy
-		HF.HasAffliction(targetCharacter, "nervegeneration", 100)
-	then
-		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
-		
-		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomy", 1000)
-		
-		for RemoveGoodLobotomy in GoodLobotomyAfflictions do
-			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs(RemoveGoodLobotomy, 1000)
-		end
-		
-		for RemoveBadLobotomy in BadLobotomyAfflictions do
-			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs(RemoveBadLobotomy, 1000)
-		end
-	end
-
 -------------------------------------------EFFECT AFFLICTIONS-----------------------------------------------------------
 	
 	if --infinite psychosis
@@ -68,14 +45,22 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 	
 	if --random respiratory arrest
 			HF.HasAffliction(targetCharacter, "lobo_randomarrest")
-		and HF.Chance(0.5)
+		and HF.Chance(0.3)
 	then
 		HF.AddAfflictionLimb(targetCharacter, "respiratoryarrest", 12, 100)
 	end		
 	
+	if --random uncons
+			HF.HasAffliction(targetCharacter, "lobo_randomuncon")
+		and HF.Chance(0.05)
+	then
+		HF.AddAfflictionLimb(targetCharacter, "sym_unconsciousness", 11, 100)
+	end			
+	
 	if --always in pain
 				HF.HasAffliction(targetCharacter, "lobo_constantpain")
 		and not HF.HasAffliction(targetCharacter, "analgesia")
+		and not HF.HasAffliction(targetCharacter, "lobo_nopain")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100) --head
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 12, 100) --torso
@@ -92,8 +77,6 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 	else
 		targetCharacter.ForceRun=false
 	end
-	
-	
 	
 end
 

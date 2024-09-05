@@ -4,7 +4,10 @@ CANCELLED very bright vision
 CANCELLED very dark vision
 CANCELLED leg paralysis -> always crawl / lose a random leg
 CANCELLED hand paralysis -> lose a random hand
+CANCELLED infinite coma
+CANCELLED Unlock random talent
 
+33
 DONE infinite psychosis 
 DONE mute (lmao)
 DONE blurry vision
@@ -28,28 +31,37 @@ DONE very slow walk speed
 DONE very fast walk speed
 DONE always run
 DONE unable to breath (big lmao)
+DONE constantly screaming
+DONE always farts
+DONE random blackouts (loss of consciousness)
+DONE Lack of traumatic shock
+DONE psychosis resistance
+DONE stun resistance
+DONE no pain
+DONE Reduce nt gain
+DONE drunk resistance
+DONE analgesia immunity
 
 
 
-constantly screaming
 nothing
-analgesia immunity
+
 drug insensitivity
 very close vision
 very far vision (EI and NTEYE comp needed, maybe just disable this one if those are activated)
 upside down screen (if possible lmao)
-constant pain on a random limb
+
 death (again lmao)
 
-random blackouts (loss of consciousness)
-infinite coma
+
+
 very slow swim speed
 very fast swim speed
 random rgb lights forever
 can't see hud (inventory or some shit idk if this is probable)
 can't see names
 can't wear clothes (lmao)
-always farts
+
 blood vision
 random tf2 medic jumpscares (very rare)
 can't use health interface (lmao if doc)
@@ -69,14 +81,13 @@ weird skin colors
 
 
 
-stun resistance
 
-Reduce nt gain
 
-Unlock random talent
 
-psychosis resistance
 
-drunk resistance
 
-Lack of traumatic shock
+
+
+
+
+
