@@ -2,12 +2,12 @@
 <Afflictions>
   
 			<!-- Lobotomy surgery afflictions -->
-  <Affliction name="Orbitoclast Placed" identifier="orbitoclastready" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+  <Affliction name="" identifier="orbitoclastready" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="35" />
     <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="128,128,128,128" origin="0,0" />
   </Affliction>
   
-	<Affliction name="Lobotomization" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+	<Affliction name="" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
 		<Effect minstrength="0" maxstrength="100" strengthchange="20">
 			<StatusEffect target="Character" interval="1" disabledeltatime="true">
 				<Conditional orbitoclastspin="gteq 99" />
@@ -21,7 +21,7 @@
 		<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,128,128,128" origin="0,0" />
 	</Affliction>  
   
-  <Affliction name="Ethanol Lobotomization" identifier="ethanollobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+  <Affliction name="" identifier="ethanollobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="20">
 		<StatusEffect target="Character" interval="1" disabledeltatime="true">
 			<Conditional ethanollobotomy="gteq 99" />
@@ -31,7 +31,7 @@
     <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="0,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Nerve Generation" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" iconcolors="255,255,255,255;0,255,50,255">
+  <Affliction name="" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,255,255,255;0,255,50,255">
 	<Effect minstrength="0" maxstrength="100" strengthchange="5">
 		<StatusEffect target="Character" interval="1" disabledeltatime="true">
 			<Conditional nervegeneration="gteq 99" />
@@ -95,20 +95,20 @@
 			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="160" camerashakerange="4000" flashrange="1000" flashduration="0.10" screencolor="255,255,255,255" screencolorrange="1000" screencolorduration="0.35" />
         </StatusEffect>
 		<StatusEffect target="Character" >
-			<Conditional nervegeneration="gteq 95" />
+			<Conditional nervegeneration="gteq 90" />
 			<Affliction identifier="seizure" amount="-500" />
 		</StatusEffect>
 	</Effect>
 	<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Lobotomized" identifier="lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="10" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,255,255,255;255,255,255,255;255,100,0,255;255,0,0,255">
+  <Affliction name="" identifier="lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="10" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="255,255,255,255;255,255,255,255;255,100,0,255;255,0,0,255">
     <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,0,128,128" origin="0,0" />
 	<Effect minstrength="0" maxstrength="5"/>
 	<Effect minstrength="5" maxstrength="10"/>
   </Affliction>
   
-  <Affliction name="Lobotomized to death" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomy" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,0,0,255;255,0,0,255">
+  <Affliction name="" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomy" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,0,0,255;255,0,0,255">
     <Effect minstrength="0" maxstrength="2" minvitalitydecrease="0.0" maxvitalitydecrease="1000" />
   </Affliction>
   
@@ -123,7 +123,7 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_blurredvision" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-    <Effect minstrength="0" maxstrength="2" minscreenblur="0.0" maxscreenblur="1.0" />
+    <Effect minstrength="0" maxstrength="2" minscreenblur="0.0" maxscreenblur="0.7" />
   </Affliction>
   
   <Affliction name="" identifier="lobo_ungenius" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -162,12 +162,12 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_screenshake" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-    <Effect minstrength="0" maxstrength="2">
+    <PeriodicEffect mininterval="10" maxinterval="35">
       <StatusEffect target="Character" targetlimb="Head">
         <Conditional IsLocalPlayer="True" />
-        <Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="4" camerashakerange="250" />
+        <Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="50" camerashakerange="500" />
       </StatusEffect>
-    </Effect>
+    </PeriodicEffect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_deaf" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -243,7 +243,7 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_randomuncon" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-  </Affliction>  
+  </Affliction>    
   
   <Affliction name="" identifier="lobo_noanalgesia" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
 	<Effect minstrength="0" maxstrength="2" resistancefor="analgesia" minresistance="0" maxresistance="1"/> 
@@ -251,22 +251,22 @@
 
 	<!-- Durden -->
   <Affliction identifier="lobo_durden" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
-	<PeriodicEffect mininterval="10" maxinterval="25">
+	<PeriodicEffect mininterval="10" maxinterval="170">
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden1" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="50" maxinterval="100">
+	<PeriodicEffect mininterval="20" maxinterval="190">
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden2" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="130" maxinterval="200">		
+	<PeriodicEffect mininterval="30" maxinterval="210">		
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden3" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="250" maxinterval="300">		
+	<PeriodicEffect mininterval="40" maxinterval="230">		
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden4" strength="100" />
 		</StatusEffect>
@@ -292,6 +292,8 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
     <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden4.png" />
   </Affliction>
+  <!-- Durden end -->
+  
   
 		<!-- Good Afflictions -->
   

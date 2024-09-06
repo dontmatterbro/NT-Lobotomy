@@ -1,21 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
+	<!-- Items -->
   <entityname.orbitoclast>Orbitoclast</entityname.orbitoclast>
-  <entitydescription.orbitoclast>Description here.</entitydescription.orbitoclast>  
+  <entitydescription.orbitoclast>A surgical instrument used for performing transorbital lobotomies.</entitydescription.orbitoclast>  
   
   <entityname.surgicalhammer>Surgical hammer</entityname.surgicalhammer>
-  <entitydescription.surgicalhammer>Description here.</entitydescription.surgicalhammer>
- 
-  <afflictionname.lobotomy>Lobotomized</afflictionname.lobotomy>
-  <afflictiondescription.lobotomy>Lmao.</afflictiondescription.lobotomy>  
+  <entitydescription.surgicalhammer>A fancy hammer used for pushing the orbitoclast through the eye socket.</entitydescription.surgicalhammer>
   
+  <entityname.nervegenerators>Cerebral regenerative compound</entityname.nervegenerators>
+  <entitydescription.nervegenerators>A compound used to regenerate dead brain tissue and restore brain function.</entitydescription.nervegenerators>
+ 
+	<!-- Other -->
   <afflictioncauseofdeath.lobotomy>Lobotomized to death.</afflictioncauseofdeath.lobotomy>  
   <afflictioncauseofdeathself.lobotomy>You got lobotomized to death.</afflictioncauseofdeathself.lobotomy>  
   
   <afflictioncauseofdeath.lobo_paralysis>Couldn't stand the hardships of life.</afflictioncauseofdeath.lobo_paralysis> 
-  <afflictioncauseofdeathself.lobo_paralysis>You couldn't stand the hardships of life..</afflictioncauseofdeathself.lobo_paralysis>
+  <afflictioncauseofdeathself.lobo_paralysis>You couldn't stand the hardships of life...</afflictioncauseofdeathself.lobo_paralysis>
 
   <loadingscreentip>Multiple consecutive lobotomies may have adverse effects on an individual.</loadingscreentip>
+  <loadingscreentip>Ethanol lobotomies have a higher chance to yield favorable results.</loadingscreentip>
+
+
+	<!-- Afflictions -->
+  <afflictionname.lobotomy>Lobotomized</afflictionname.lobotomy>
+  <afflictiondescription.lobotomy>The patient has been lobotomized.</afflictiondescription.lobotomy> 
+
+  <afflictionname.orbitoclastready>Orbitoclast Placed</afflictionname.orbitoclastready>
+  <afflictiondescription.orbitoclastready>An orbitoclast has been placed into patients eye socket.</afflictiondescription.orbitoclastready> 
+
+  <afflictionname.orbitoclastspin>Lobotomization</afflictionname.orbitoclastspin>
+  <afflictiondescription.orbitoclastspin>The patient is being lobotomized.</afflictiondescription.orbitoclastspin>  
+
+  <afflictionname.ethanollobotomy>Ethanol Lobotomization</afflictionname.ethanollobotomy>
+  <afflictiondescription.ethanollobotomy>The patient is being lobotomized with ethanol.</afflictiondescription.ethanollobotomy>  
+
+  <afflictionname.nervegeneration>Nerve Regeneration</afflictionname.nervegeneration>
+  <afflictiondescription.nervegeneration>The patients brain is rapidly regenerating.</afflictiondescription.nervegeneration> 
+
+	<!-- Health scanner afflictions -->
+  <afflictionname.lobo_infinitepsychosis>Protensive psychotic disorder</afflictionname.lobo_infinitepsychosis>
+  
+  <afflictionname.lobo_mute>Mutism</afflictionname.lobo_mute>
+  
+  <afflictionname.lobo_blurredvision>Vision loss</afflictionname.lobo_blurredvision>
+  
+  <afflictionname.lobo_ungenius>Intellectual disability</afflictionname.lobo_ungenius>
+  
+  <afflictionname.lobo_alwaysdrunk>Reduced motor skills</afflictionname.lobo_alwaysdrunk>
+  
+  <afflictionname.lobo_hearscreams>Auditory hallucinations</afflictionname.lobo_hearscreams>
+  
+  <afflictionname.lobo_tinnitus>Tinnitus</afflictionname.lobo_tinnitus>
+  
+  <afflictionname.lobo_screenshake>Virtual earthquake syndrome</afflictionname.lobo_screenshake>
+  
+  <afflictionname.lobo_deaf>Deafness</afflictionname.lobo_deaf>
+  
+  <afflictionname.lobo_blind>Tunnel vision</afflictionname.lobo_blind>
+  
+  <afflictionname.lobo_constantpain>Fibromyalgia</afflictionname.lobo_constantpain>
+  
+  <afflictionname.lobo_paralysis>Severed motor connections</afflictionname.lobo_paralysis>
+  
+  <afflictionname.lobo_invertcontrols>Somatic nerve reversion</afflictionname.lobo_invertcontrols>
+  
+  <afflictionname.lobo_nausea>Vertigo</afflictionname.lobo_nausea>
+  
+  <afflictionname.lobo_alwaysvigorous>Mania</afflictionname.lobo_alwaysvigorous>
+  
+  <afflictionname.lobo_alwaysjolly>Williams syndrome</afflictionname.lobo_alwaysjolly>
+  
+  <afflictionname.lobo_differentteam>Psychopathy</afflictionname.lobo_differentteam>
+  
+  <afflictionname.lobo_veryslow>Abnormal gait</afflictionname.lobo_veryslow>
+  
+  <afflictionname.lobo_alwaysrun>Hyperactivity</afflictionname.lobo_alwaysrun>
+  
+  <afflictionname.lobo_randomarrest>Abnormal brain-lung crosstalk</afflictionname.lobo_randomarrest>
+  
+  <afflictionname.lobo_makescreams>Tourette syndrome</afflictionname.lobo_makescreams>
+  
+  <afflictionname.lobo_fart>Gas incontinence</afflictionname.lobo_fart>
+  
+  <afflictionname.lobo_randomuncon>Narcolepsy</afflictionname.lobo_randomuncon>
+  
+  <afflictionname.lobo_noanalgesia>Heightened opioid resistance</afflictionname.lobo_noanalgesia>
+  
+  <afflictionname.lobo_durden>You do NOT talk about lobotomies</afflictionname.lobo_durden>
+  
+  <!-- Good afflictions -->
+  <afflictionname.lobo_genius>Genius</afflictionname.lobo_genius>
+  
+  <afflictionname.lobo_veryfast>Hyperkinetic movement disorder</afflictionname.lobo_veryfast>
+  
+  <afflictionname.lobo_notrauma>Desensitized</afflictionname.lobo_notrauma>
+  
+  <afflictionname.lobo_nopsychosis>Increased mental resistance</afflictionname.lobo_nopsychosis>
+  
+  <afflictionname.lobo_nostun>Stun resistance</afflictionname.lobo_nostun>
+  
+  <afflictionname.lobo_nopain>Congenital analgesia</afflictionname.lobo_nopain>
+  
+  <afflictionname.lobo_noneurotrauma>Incresed cerebral regeneration</afflictionname.lobo_noneurotrauma>
+  
+  <afflictionname.lobo_nodrunk>Heightened alcohol tolerance</afflictionname.lobo_nodrunk>
 
 </infotexts>

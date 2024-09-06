@@ -65,7 +65,8 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 	if --ethanol insertion
 			identifier == "ethanol"
 		and limbtype==11
-		and HF.HasAffliction(targetCharacter, "drilledbones", 90) 
+		and HF.HasAffliction(targetCharacter, "drilledbones", 90)
+		and not HF.HasAffliction(targetCharacter, "ethanollobotomy")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "ethanollobotomy", 11, 1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter) 
 		Entity.Spawner.AddItemToRemoveQueue(item)
@@ -177,13 +178,13 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult, prevchance)
 		HF.GetAfflictionStrength(targetCharacter, "lobotomy") <= 5
 	then
 		if
-			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.07 )
+			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.06 )
 		then
 			HF.AddAfflictionLimb(targetCharacter, "lobotomydeath", 11, 3)
 		end
 	else
 		if --scales up after 5 lobotomies
-			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.12 )
+			HF.Chance( HF.GetAfflictionStrength(targetCharacter, "lobotomy")*0.099 )
 		then
 			HF.AddAfflictionLimb(targetCharacter, "lobotomydeath", 11, 3)
 		end

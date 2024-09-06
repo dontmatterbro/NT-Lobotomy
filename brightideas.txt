@@ -6,6 +6,8 @@ CANCELLED leg paralysis -> always crawl / lose a random leg
 CANCELLED hand paralysis -> lose a random hand
 CANCELLED infinite coma
 CANCELLED Unlock random talent
+CANCELLED drug insensitivity
+CANCELLED weird skin colors
 
 33
 DONE infinite psychosis 
@@ -46,7 +48,7 @@ DONE analgesia immunity
 
 nothing
 
-drug insensitivity
+
 very close vision
 very far vision (EI and NTEYE comp needed, maybe just disable this one if those are activated)
 upside down screen (if possible lmao)
@@ -75,7 +77,7 @@ random anemia
 
 hear lobotomy theme
 
-weird skin colors
+
 
 
 
