@@ -11,6 +11,17 @@
 	<Other file="%ModDir%/Sounds/tinnitus.ogg" />
 	<Other file="%ModDir%/Sounds/fart1.ogg" />
 	<Other file="%ModDir%/Sounds/fart2.ogg" />
+	<Other file="%ModDir%/Sounds/lobotomy1.ogg" />
+	<Other file="%ModDir%/Sounds/lobotomy2.ogg" />
+	<Other file="%ModDir%/Sounds/lobotomy3.ogg" />
+	<Other file="%ModDir%/Sounds/insertion1.ogg" />
+	<Other file="%ModDir%/Sounds/insertion2.ogg" />
+	<Other file="%ModDir%/Sounds/insertion3.ogg" />
+	<Other file="%ModDir%/Sounds/ethanol1.ogg" />
+	<Other file="%ModDir%/Sounds/ethanol2.ogg" />
+	<Other file="%ModDir%/Sounds/ethanol3.ogg" />
+	<Other file="%ModDir%/Sounds/sticky1.ogg" />
+	<Other file="%ModDir%/Sounds/sticky2.ogg" />
 	<Other file="%ModDir%/Textures/SpriteSheet.png" />
 	<Other file="%ModDir%/Textures/Overlays/durden1.png" />
 	<Other file="%ModDir%/Textures/Overlays/durden2.png" />

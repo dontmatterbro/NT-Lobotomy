@@ -14,6 +14,8 @@ BadLobotomyAfflictions = {
 
 Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter, targetCharacter, limb)
 
+	if HF.HasAffliction(targetCharacter, "stasis") then return end 
+	
     if -- invalid use, dont do anything
         item == nil or
         usingCharacter == nil or
@@ -25,20 +27,23 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 	local limbtype = HF.NormalizeLimbType(limb.type)
 	---------------------------------------SURGERY CODE--------------------------
 	
-	if not limbtype==11 then return end
-	if HF.HasAffliction(targetCharacter, "stasis") then return end 
+	
 	
 	--transorbital lobotomy
 	if --Orbitoclast
-				identifier == "orbitoclast"
+				identifier=="orbitoclast"
+			and limbtype==11
 		and not HF.HasAffliction(targetCharacter, "orbitoclastready")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "orbitoclastready", 11, 1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
 		Entity.Spawner.AddItemToRemoveQueue(item) --despawn item as it is inside the patients skull
+		
+		HF.GiveItem(targetCharacter, "lobosfx_orbitoclast") --sfx
 	end
 	
 	if --Hammer
 				identifier == "surgicalhammer"
+			and limbtype==11
 			and HF.HasAffliction(targetCharacter, "orbitoclastready", 100)
 		--and not HF.HasAffliction(targetCharacter, "orbitoclastspin")
 	
@@ -49,26 +54,31 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 			HF.AddAfflictionLimb(targetCharacter, "severepainlite", 11, 5)
 			HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100)
 		end
-		
+			
 			HF.AddAfflictionLimb(targetCharacter, "orbitoclastspin", 11, 1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
 			HF.GiveItem(usingCharacter,"orbitoclast") --give back orbitoclast
-			--a statuseffect hook completes the surgery
+			
+			HF.GiveItem(targetCharacter, "lobosfx_lobotomy") --sfx
 	end
 
 	--ethanol lobotomy
 	if --ethanol insertion
 			identifier == "ethanol"
-		and HF.HasAffliction(targetCharacter, "drilledbones") --test this, may be buggy
+		and limbtype==11
+		and HF.HasAffliction(targetCharacter, "drilledbones", 90) 
 	then
 		HF.AddAfflictionLimb(targetCharacter, "ethanollobotomy", 11, 1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter) 
 		Entity.Spawner.AddItemToRemoveQueue(item)
+		
+		HF.GiveItem(targetCharacter, "lobosfx_ethanollobotomy")
 	end
 
 
 	--lobotomy reversal
 	if --nerve insertion
 			identifier == "nervegenerators"
-		and HF.HasAffliction(targetCharacter, "drilledbones") 
+		and limbtype==11
+		and HF.HasAffliction(targetCharacter, "drilledbones", 90) 
 		and HF.HasAffliction(targetCharacter, "lobotomy")
 	then
 		HF.AddAfflictionLimb(targetCharacter, "nervegeneration", 11, 1) --this will remove lobotomies upon reaching 100%
@@ -85,7 +95,13 @@ Hook.Add("lobotomize", function(effect, deltaTime, item, targets, worldPosition,
 			   HF.HasAffliction(targetCharacter, "orbitoclastspin", 90)
 			or HF.HasAffliction(targetCharacter, "ethanollobotomy", 90)
 		then
-			NTLOBO.ApplyLobotomy(targetCharacter, nil)
+			if --ethanol lobotomy has 5% more chance to yield good results
+				HF.HasAffliction(targetCharacter, "ethanollobotomy", 90) 
+			then
+				NTLOBO.ApplyLobotomy(targetCharacter, nil, 0.20)
+			else
+				NTLOBO.ApplyLobotomy(targetCharacter, nil, 0.15)
+			end
 				
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastspin", 1000)
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastready", 1000)
@@ -148,10 +164,10 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult, prevchance)
 		result=="bad"
 	then
 		HF.AddAfflictionLimb(targetCharacter, BadLobotomy, 11, 3)
-		print(BadLobotomy)
+		--print(BadLobotomy)
 	else
 		HF.AddAfflictionLimb(targetCharacter, GoodLobotomy, 11, 3)
-		print(GoodLobotomy)
+		--print(GoodLobotomy)
 	end
 		
 		

@@ -50,19 +50,70 @@
     <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10" />
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="14">
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="14" amount="2">
       <RequiredSkill identifier="medical" level="60" />
       <RequiredItem identifier="potassium" />
+      <RequiredItem identifier="sodium" />
       <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="braintransplant" />
     </Fabricate>
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
-      <StatusEffect type="OnUse" target="This">
-        <Sound file="%ModDir:Neurotrauma%/Sound/hypospray.ogg" range="500" />
-      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
       </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="50" />
   </Item>
+  
+  
+  <!-- SFX -->
+  
+  <Item name="" identifier="lobosfx_orbitoclast" description="" hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        	<Sound file="%ModDir%/Sounds/insertion1.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/insertion2.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/insertion3.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item name="" identifier="lobosfx_lobotomy" description="" hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        	<Sound file="%ModDir%/Sounds/lobotomy1.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/lobotomy2.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/lobotomy3.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>  
+  
+  <Item name="" identifier="lobosfx_ethanollobotomy" description="" hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        	<Sound file="%ModDir%/Sounds/ethanol1.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/ethanol2.ogg" range="500" />
+			<Sound file="%ModDir%/Sounds/ethanol3.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>  
+  
+
+  
+  
 </Items>

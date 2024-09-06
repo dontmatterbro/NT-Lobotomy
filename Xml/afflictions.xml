@@ -7,15 +7,19 @@
     <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="128,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Lobotomization" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="20">
-      <StatusEffect target="Character" interval="1" disabledeltatime="true">
-        <Conditional orbitoclastspin="gteq 99" />
-        <LuaHook name="lobotomize" custom="Character" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,128,128,128" origin="0,0" />
-  </Affliction>  
+	<Affliction name="Lobotomization" identifier="orbitoclastspin" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+		<Effect minstrength="0" maxstrength="100" strengthchange="20">
+			<StatusEffect target="Character" interval="1" disabledeltatime="true">
+				<Conditional orbitoclastspin="gteq 99" />
+				<LuaHook name="lobotomize" custom="Character" />
+			</StatusEffect>
+			<StatusEffect target="Character" comparison="and">
+				<Conditional analgesia="lte 0.5" anesthesia="lte 0.5" sym_unconsciousness="lte 0.1" />
+				<Affliction identifier="traumaticshock" amount="4" />
+			</StatusEffect>
+		</Effect>
+		<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,128,128,128" origin="0,0" />
+	</Affliction>  
   
   <Affliction name="Ethanol Lobotomization" identifier="ethanollobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="20">
@@ -32,6 +36,67 @@
 		<StatusEffect target="Character" interval="1" disabledeltatime="true">
 			<Conditional nervegeneration="gteq 99" />
 			<LuaHook name="nerveregen" custom="Character" />
+		</StatusEffect>
+		<StatusEffect target="Character" comparison="and">
+			<Conditional IsLocalPlayer="True"  />
+			<Conditional nervegeneration="lteq 99" />
+			<Sound file="%ModDir%/Sounds/nervegeneration.ogg" dontmuffle="true" />
+		</StatusEffect> 
+		<StatusEffect target="Character" comparison="and" >
+			<Conditional nervegeneration="gteq 60" />
+			<Conditional nervegeneration="lteq 95" />
+			<Affliction identifier="seizure" amount="50" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 62" />
+			<Conditional nervegeneration="lteq 75" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="255,150,0,80" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 62" />
+			<Conditional nervegeneration="lteq 70" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="153,255,102,100" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 70" />
+			<Conditional nervegeneration="lteq 75" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="120" camerashakerange="2000" flashrange="500" flashduration="0.10" screencolor="0,255,255,120" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 75" />
+			<Conditional nervegeneration="lteq 80" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="140" camerashakerange="3000" flashrange="500" flashduration="0.10" screencolor="204,102,255,140" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>			
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 80" />
+			<Conditional nervegeneration="lteq 85" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="140" camerashakerange="3000" flashrange="750" flashduration="0.10" screencolor="255,0,0,160" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 85" />
+			<Conditional nervegeneration="lteq 90" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="140" camerashakerange="3000" flashrange="750" flashduration="0.10" screencolor="255,255,102,180" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 90" />
+			<Conditional nervegeneration="lteq 97" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="140" camerashakerange="3000" flashrange="1000" flashduration="0.10" screencolor="0,255,0,200" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>		
+		<StatusEffect target="Character" targetlimb="Head" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nervegeneration="gteq 97" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="160" camerashakerange="4000" flashrange="1000" flashduration="0.10" screencolor="255,255,255,255" screencolorrange="1000" screencolorduration="0.35" />
+        </StatusEffect>
+		<StatusEffect target="Character" >
+			<Conditional nervegeneration="gteq 95" />
+			<Affliction identifier="seizure" amount="-500" />
 		</StatusEffect>
 	</Effect>
 	<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,128,128,128" origin="0,0" />
@@ -191,17 +256,17 @@
 			<Affliction identifier="lobo_durden1" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="25" maxinterval="45">
+	<PeriodicEffect mininterval="50" maxinterval="100">
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden2" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="60" maxinterval="90">		
+	<PeriodicEffect mininterval="130" maxinterval="200">		
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden3" strength="100" />
 		</StatusEffect>	
 	</PeriodicEffect>
-	<PeriodicEffect mininterval="30" maxinterval="60">		
+	<PeriodicEffect mininterval="250" maxinterval="300">		
 		<StatusEffect target="Character">
 			<Affliction identifier="lobo_durden4" strength="100" />
 		</StatusEffect>
