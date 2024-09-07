@@ -55,7 +55,7 @@
       <RequiredItem identifier="potassium" />
       <RequiredItem identifier="sodium" />
       <RequiredItem identifier="organicfiber" amount="2" />
-      <RequiredItem identifier="braintransplant" />
+      <RequiredItem identifier="braintransplant" mincondition="0.01" usecondition="false" /> <!-- change this to fix brain rotting in fab unit -->
     </Fabricate>
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
       <StatusEffect type="OnBroken" target="This">
