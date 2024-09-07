@@ -168,6 +168,8 @@ Hook.Add("nerveregen", function(effect, deltaTime, item, targets, worldPosition,
 			
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("failedlobotomy", 1000) --failsafe incase something fucks up
 			
+			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("lobotomydeath", 1000) --cure death if they have the skill I suppose
+			
 			for RemoveGoodLobotomy in GoodLobotomyAfflictions do
 				targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs(RemoveGoodLobotomy, 1000)
 			end
