@@ -27,8 +27,6 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 	local limbtype = HF.NormalizeLimbType(limb.type)
 	---------------------------------------SURGERY CODE--------------------------
 	
-	
-	
 	--transorbital lobotomy
 	if --Orbitoclast
 				identifier=="orbitoclast"
@@ -60,6 +58,18 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 			
 			HF.GiveItem(targetCharacter, "lobosfx_lobotomy") --sfx
 	end
+
+	if --remove Orbitoclast
+				identifier=="advretractors"
+			and limbtype==11
+			and HF.HasAffliction(targetCharacter, "orbitoclastready")
+		and not HF.HasAffliction(targetCharacter, "orbitoclastspin")
+	then
+		HF.GiveItem(usingCharacter,"orbitoclast") --give back orbitoclast
+		HF.GiveItem(targetCharacter, "lobosfx_orbitoclast") --sfx
+		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("orbitoclastready", 1000) --remove affliction
+	end
+
 
 	--ethanol lobotomy
 	if --ethanol insertion

@@ -246,7 +246,7 @@
   </Affliction>    
   
   <Affliction name="" identifier="lobo_noanalgesia" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-	<Effect minstrength="0" maxstrength="2" resistancefor="analgesia" minresistance="0" maxresistance="1"/> 
+	<Effect minstrength="0" maxstrength="2" resistancefor="analgesia" minresistance="0" maxresistance="0.8"/> 
   </Affliction>
 
 	<!-- Durden -->
@@ -298,7 +298,7 @@
 		<!-- Good Afflictions -->
   
   <Affliction name="" identifier="lobo_genius" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-    <Effect minstrength="0" maxstrength="2" minskillmultiplier="0" maxskillmultiplier="2.5" />
+    <Effect minstrength="0" maxstrength="2" minskillmultiplier="0" maxskillmultiplier="2" />
   </Affliction>
   
   <Affliction name="" identifier="lobo_veryfast" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -306,7 +306,11 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_notrauma" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-	<Effect minstrength="0" maxstrength="2" resistancefor="traumaticshock" minresistance="0" maxresistance="1"/> 
+	<Effect minstrength="0" maxstrength="2" resistancefor="traumaticshock" minresistance="0" maxresistance="1" > 
+		<StatusEffect target="Character" interval="6" disabledeltatime="true">
+			<ReduceAffliction identifier="traumaticshock" amount="100" />
+		</StatusEffect>
+	</Effect>
   </Affliction>  
   
   <Affliction name="" identifier="lobo_nopsychosis" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
