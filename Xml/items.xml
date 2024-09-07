@@ -50,8 +50,8 @@
     <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10" />
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="14" amount="2">
-      <RequiredSkill identifier="medical" level="60" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" amount="2">
+      <RequiredSkill identifier="medical" level="70" />
       <RequiredItem identifier="potassium" />
       <RequiredItem identifier="sodium" />
       <RequiredItem identifier="organicfiber" amount="2" />
