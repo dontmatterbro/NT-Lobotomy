@@ -50,12 +50,12 @@
     <InventoryIcon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10" />
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" amount="2">
-      <RequiredSkill identifier="medical" level="70" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="18" amount="2">
+      <RequiredSkill identifier="medical" level="65" />
       <RequiredItem identifier="potassium" />
       <RequiredItem identifier="sodium" />
       <RequiredItem identifier="organicfiber" amount="2" />
-      <RequiredItem identifier="braintransplant" mincondition="0.01" usecondition="false" /> <!-- change this to fix brain rotting in fab unit -->
+      <RequiredItem identifier="braintransplant" mincondition="0.1" usecondition="false" /> <!-- change this to fix brain rotting in fab unit -->
     </Fabricate>
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
       <StatusEffect type="OnBroken" target="This">
