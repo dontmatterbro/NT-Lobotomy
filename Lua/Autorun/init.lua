@@ -2,8 +2,8 @@ NTLOBO = {} -- Neurotrauma Lobotomy
 NTLOBO.Name="Lobotomy"
 NTLOBO.Version = "A1.0.0"
 NTLOBO.VersionNum = 010000000
-NTLOBO.MinNTVersion = "A1.9.4h1"
-NTLOBO.MinNTVersionNum = 01090401
+NTLOBO.MinNTVersion = "A1.9.5h4"
+NTLOBO.MinNTVersionNum = 01090504
 NTLOBO.Path = table.pack(...)[1]
 Timer.Wait(function() if NTC ~= nil then NTC.RegisterExpansion(NTLOBO) end end,1)
 
@@ -26,10 +26,20 @@ Timer.Wait(function()
 	end
 
 
-		--biscripts
-		
-		
-
+	--robotrauma comp patch
+	for package in ContentPackageManager.EnabledPackages.All do
+			if 
+				   tostring(package.UgcId) == "2948488019" --Robotrauma
+				or tostring(package.UgcId) == "2952546076" --Robo-Trauma-
+				or tostring(package.UgcId) == "3227815460" --Robotrauma (Afflictions Override)
+			then
+				if SERVER or (CLIENT and not Game.IsMultiplayer) then
+					dofile(NTLOBO.Path.."/Lua/Scripts/Compatibility/robotrauma_comp.lua")
+					print("NT Lobotomy - Robotrauma Integrated Compatibility Patch")
+				end	
+			break
+		end
+	end
 
 end,1)
 

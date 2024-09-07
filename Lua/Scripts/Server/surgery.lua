@@ -14,6 +14,8 @@ BadLobotomyAfflictions = {
 
 Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter, targetCharacter, limb)
 
+	if NTLOBO.Robot(targetCharacter) then return end--robotrauma comp
+
 	if HF.HasAffliction(targetCharacter, "stasis") then return end 
 	
     if -- invalid use, dont do anything
@@ -52,11 +54,10 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 	end
 	
 	if --Hammer hit (lobotomize)
-				identifier == "surgicalhammer"
-			and limbtype==11
-			and HF.HasAffliction(targetCharacter, "orbitoclastready", 100)
-		--and not HF.HasAffliction(targetCharacter, "orbitoclastspin")
-	
+					identifier == "surgicalhammer"
+				and limbtype==11
+				and HF.HasAffliction(targetCharacter, "orbitoclastready", 100)
+			and not HF.HasAffliction(targetCharacter, "orbitoclastspin")
 	then
 		if --Cause pain if not anesthesia
 			not HF.CanPerformSurgeryOn(targetCharacter)
@@ -242,3 +243,5 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult, prevchance)
 	
 	
 end
+
+function NTLOBO.Robot() end --gets overwritten when robotrauma is active
