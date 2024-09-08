@@ -105,27 +105,6 @@
 	<icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="384,128,128,128" origin="0,0" />
   </Affliction>
   
-  <Affliction identifier="nervedeath" causeofdeathdescription="afflictioncauseofdeath.nervedeath" selfcauseofdeathdescription="afflictioncauseofdeathself.nervedeath" maxstrength="3" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="1">
-	  <StatusEffect target="Character" delay="0" comparison="and">
-		<Conditional IsLocalPlayer="True" />
-		<Conditional nervedeath="lteq 1" />
-		<Sound file="%ModDir%/Sounds/aorta.ogg" dontmuffle="true" volume="5" loop="false" />
-	  </StatusEffect>
-	  <StatusEffect target="Character" targetlimbs="Head" delay="4.8">
-		<Conditional IsLocalPlayer="True" />
-        <Explosion range="1" flashrange="0" stun="0" force="2" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" screencolor="0,0,0,255" screencolorrange="1000" screencolorduration="0.4"/>
-      </StatusEffect>
-      <StatusEffect target="Character" targetlimbs="Head" delay="5">
-        <ParticleEmitter particle="blood" copyentityangle="true" anglemin="0" anglemax="0" particlespersecond="45" velocitymin="65" velocitymax="220" scalemin="1.5" scalemax="2.8" />
-        <Explosion range="1" decal="blood" decalsize="3.5" flashrange="0" stun="0" force="2" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="1000" >
-          <Affliction identifier="nervedeath" strength="1" />
-        </Explosion>
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="2" maxstrength="3" multiplybymaxvitality="true" minvitalitydecrease="5" maxvitalitydecrease="5" />
-  </Affliction>
-  
   <Affliction name="" identifier="lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="10" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="255,255,255,255;255,255,255,255;255,100,0,255;255,0,0,255">
     <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,0,128,128" origin="0,0" />
 	<Effect minstrength="0" maxstrength="5"/>
