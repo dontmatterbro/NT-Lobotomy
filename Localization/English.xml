@@ -13,7 +13,10 @@
  
 	<!-- Other -->
   <afflictioncauseofdeath.lobotomydeath>Lobotomized to death.</afflictioncauseofdeath.lobotomydeath>  
-  <afflictioncauseofdeathself.lobotomydeath>You got lobotomized to death.</afflictioncauseofdeathself.lobotomydeath>  
+  <afflictioncauseofdeathself.lobotomydeath>You got lobotomized to death.</afflictioncauseofdeathself.lobotomydeath>   
+  
+  <afflictioncauseofdeath.nervedeath>Exploded due to intracranial pressure.</afflictioncauseofdeath.nervedeath>  
+  <afflictioncauseofdeathself.nervedeath>You exploded due to intracranial pressure.</afflictioncauseofdeathself.nervedeath>  
   
   <afflictioncauseofdeath.lobo_paralysis>Couldn't stand the hardships of life.</afflictioncauseofdeath.lobo_paralysis> 
   <afflictioncauseofdeathself.lobo_paralysis>You couldn't stand the hardships of life...</afflictioncauseofdeathself.lobo_paralysis>

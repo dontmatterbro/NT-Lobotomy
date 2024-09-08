@@ -122,7 +122,7 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 			identifier == "nervegenerators"
 		and limbtype==11
 		and HF.HasAffliction(targetCharacter, "drilledbones", 90) 
-		and HF.HasAffliction(targetCharacter, "lobotomy")
+		-- and HF.HasAffliction(targetCharacter, "lobotomy") adverse effects present now
 	then
 		HF.AddAfflictionLimb(targetCharacter, "nervegeneration", 11, 1) --this will remove lobotomies upon reaching 100%
 		Entity.Spawner.AddItemToRemoveQueue(item)
@@ -160,7 +160,8 @@ Hook.Add("nerveregen", function(effect, deltaTime, item, targets, worldPosition,
 
 	for k, targetCharacter in pairs(targets) do
 		if --remove lobotomy
-			HF.HasAffliction(targetCharacter, "nervegeneration", 90)
+				HF.HasAffliction(targetCharacter, "nervegeneration", 98)
+			and HF.HasAffliction(targetCharacter, "lobotomy")
 		then
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
 			
@@ -177,6 +178,15 @@ Hook.Add("nerveregen", function(effect, deltaTime, item, targets, worldPosition,
 			for RemoveBadLobotomy in BadLobotomyAfflictions do
 				targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs(RemoveBadLobotomy, 1000)
 			end
+		
+		elseif 
+					HF.HasAffliction(targetCharacter, "nervegeneration", 98)
+			and not HF.HasAffliction(targetCharacter, "lobotomy")
+		then
+			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
+			--Timer.Wait(function()
+				HF.AddAfflictionLimb(targetCharacter, "nervedeath", 11, 1)
+			--end, 5000)
 		end
 	end
 
