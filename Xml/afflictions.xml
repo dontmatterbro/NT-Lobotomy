@@ -22,7 +22,100 @@
 	</Affliction>  
 
   <Affliction name="" identifier="failedlobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+  </Affliction>    
+  
+  <Affliction name="" identifier="lobo_nervedeathdelay" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character" targetlimbs="Head" delay="10">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>
   </Affliction>  
+  
+  <Affliction name="" identifier="nervedeath" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="10" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="1">
+		<StatusEffect target="Character" targetlimb="Head">
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="60" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="255,0,0,200" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Conditional IsLocalPlayer="True" />
+			<Sound file="%ModDir%/Sounds/explode.ogg" dontmuffle="true" />
+		</StatusEffect>
+	</Effect>    
+	<Effect minstrength="1" maxstrength="2">
+		<StatusEffect target="Character" targetlimb="Head">	
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="70" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="0,0,0,255" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>	
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>	
+	<Effect minstrength="2" maxstrength="3">
+		<StatusEffect target="Character" targetlimb="Head">	
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="80" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="255,0,0,200" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>	
+	<Effect minstrength="3" maxstrength="4">
+		<StatusEffect target="Character" targetlimb="Head">	
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="90" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="0,0,0,255" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>	
+	<Effect minstrength="4" maxstrength="5">
+		<StatusEffect target="Character" targetlimb="Head">
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="255,0,0,200" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>		
+	<Effect minstrength="5" maxstrength="6">
+		<StatusEffect target="Character" targetlimb="Head">
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="0,0,0,255" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="nervedeath" strength="1" />
+		</StatusEffect>
+	</Effect>	
+	<Effect minstrength="6" maxstrength="7">
+		<StatusEffect target="Character" targetlimb="Head">
+			<Conditional IsLocalPlayer="True" />
+			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="1000" flashrange="250" flashduration="0.10" screencolor="255,255,255,255" screencolorrange="1000" screencolorduration="0.1" />
+		</StatusEffect>
+		<StatusEffect target="Character" targetlimb="Head">
+			<Affliction identifier="lobo_headexplode" strength="2" />
+		</StatusEffect>
+	</Effect>
+  </Affliction>
+
+  <Affliction name="" identifier="lobo_headexplode" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="2" resistancefor="miracleworker" minresistance="0" maxresistance="1">
+		<StatusEffect target="Character" targetlimbs="Head" disabledeltatime="true" comparison="And" severlimbsprobability="1">
+			<ParticleEmitter particle="blood" copyentityangle="true" anglemin="0" anglemax="0" particlespersecond="45" velocitymin="65" velocitymax="220" scalemin="1.5" scalemax="2.8" />
+			<Explosion range="1" decal="blood" decalsize="10" flashrange="0" stun="0" force="2" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" camerashake="0" camerashakerange="0" screencolor="0,0,0,0" screencolorrange="0" screencolorduration="0"/>
+			<Affliction identifier="miracleworker" amount="-100" />
+			<Affliction identifier="lobo_headexplodedeath" strength="200" />
+		</StatusEffect>
+	</Effect>
+  </Affliction>   
+  
+  <Affliction name="" identifier="lobo_headexplodedeath" causeofdeathdescription="afflictioncauseofdeath.headexplode" selfcauseofdeathdescription="afflictioncauseofdeathself.headexplode" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="2" multiplybymaxvitality="true" minvitalitydecrease="10" maxvitalitydecrease="10" />
+  </Affliction> 
 
   <Affliction name="" identifier="ethanollobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="20">

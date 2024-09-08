@@ -1,7 +1,7 @@
 NTLOBO = {} -- Neurotrauma Lobotomy
 NTLOBO.Name="Lobotomy"
-NTLOBO.Version = "A1.0.0h1"
-NTLOBO.VersionNum = 010000001
+NTLOBO.Version = "A1.0.1"
+NTLOBO.VersionNum = 010000101
 NTLOBO.MinNTVersion = "A1.9.5h4"
 NTLOBO.MinNTVersionNum = 01090504
 NTLOBO.Path = table.pack(...)[1]

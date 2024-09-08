@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+
+	<!-- Items -->
+  <entityname.orbitoclast>Орбитокласт</entityname.orbitoclast>
+  <entitydescription.orbitoclast>Хирургический инструмент, используемый для проведения трансорбитальной лоботомии.</entitydescription.orbitoclast>  
+  
+  <entityname.surgicalhammer>Хирургический молоток</entityname.surgicalhammer>
+  <entitydescription.surgicalhammer>Забавный молоточек, используемый для проталкивания орбитокласта через глазницу.</entitydescription.surgicalhammer>
+  
+  <entityname.nervegenerators>Церебральный регенеративный препарат</entityname.nervegenerators>
+  <entitydescription.nervegenerators>Соединение, используемое для регенерации отмерших тканей мозга и восстановления его функций.</entitydescription.nervegenerators>
+ 
+	<!-- Other -->
+  <afflictioncauseofdeath.lobotomydeath>Смерть от неудачной лоботомии.</afflictioncauseofdeath.lobotomydeath>  
+  <afflictioncauseofdeathself.lobotomydeath>Тебя убила лоботомия, лол.</afflictioncauseofdeathself.lobotomydeath>   
+
+  <afflictioncauseofdeath.headexplode>Обезглавлен в результате внутричерепного давления.</afflictioncauseofdeath.headexplode>  
+  <afflictioncauseofdeathself.headexplode>Ваша голова взорвалась из-за внутричерепного давления.</afflictioncauseofdeathself.headexplode>  
+ 
+  <afflictioncauseofdeath.lobo_paralysis>Не выдержал тягот жизни.</afflictioncauseofdeath.lobo_paralysis> 
+  <afflictioncauseofdeathself.lobo_paralysis>Вы не могли вынести тягот жизни...</afflictioncauseofdeathself.lobo_paralysis>
+
+  <loadingscreentip>Несколько последовательных лоботомий могут оказать неблагоприятное воздействие на человека.</loadingscreentip>
+  <loadingscreentip>Лоботомия с использованием этанола имеет больше шансов на благоприятный исход.</loadingscreentip>
+  <loadingscreentip>Пациенты, перенесшие операцию на CRC, сообщают о галлюцинациях.</loadingscreentip>
+  <loadingscreentip>Орбитокласты можно удалить с помощью кожных ретракторов.</loadingscreentip>
+
+
+	<!-- Afflictions -->
+  <afflictionname.lobotomy>Лоботомирован</afflictionname.lobotomy>
+  <afflictiondescription.lobotomy>Пациент был подвергнут лоботомии.</afflictiondescription.lobotomy>   
+  
+  <afflictionname.lobotomydeath>Полная деструкция головного мозга</afflictionname.lobotomydeath>
+  <afflictiondescription.lobotomydeath>Мозг жизненно поврежден и не может поддерживать свои функции.</afflictiondescription.lobotomydeath> 
+
+  <afflictionname.orbitoclastready>Орбитокласт размещен</afflictionname.orbitoclastready>
+  <afflictiondescription.orbitoclastready>Орбитокласт был помещен в глазницу пациента.</afflictiondescription.orbitoclastready> 
+
+  <afflictionname.orbitoclastspin>Лоботомирование</afflictionname.orbitoclastspin>
+  <afflictiondescription.orbitoclastspin>Пациента подвергают лоботомии.</afflictiondescription.orbitoclastspin>  
+
+  <afflictionname.ethanollobotomy>Лоботомизация этанолом</afflictionname.ethanollobotomy>
+  <afflictiondescription.ethanollobotomy>Пациенту проводят лоботомию с помощью этанола.</afflictiondescription.ethanollobotomy>  
+
+  <afflictionname.nervegeneration>Регенерация нервов</afflictionname.nervegeneration>
+  <afflictiondescription.nervegeneration>Мозг пациента быстро восстанавливается.</afflictiondescription.nervegeneration> 
+
+	<!-- Health scanner afflictions -->
+  <afflictionname.lobo_infinitepsychosis>Прогредиентное психотическое расстройство</afflictionname.lobo_infinitepsychosis>
+  
+  <afflictionname.lobo_mute>Мутизм</afflictionname.lobo_mute>
+  
+  <afflictionname.lobo_blurredvision>Потеря зрения</afflictionname.lobo_blurredvision>
+  
+  <afflictionname.lobo_ungenius>Отсталость в развитии</afflictionname.lobo_ungenius>
+  
+  <afflictionname.lobo_alwaysdrunk>Снижение моторных навыков</afflictionname.lobo_alwaysdrunk>
+  
+  <afflictionname.lobo_hearscreams>Слуховые галлюцинации</afflictionname.lobo_hearscreams>
+  
+  <afflictionname.lobo_tinnitus>Звон в ушах</afflictionname.lobo_tinnitus>
+  
+  <afflictionname.lobo_screenshake>Синдром виртуального землетрясения</afflictionname.lobo_screenshake>
+  
+  <afflictionname.lobo_deaf>Глухота</afflictionname.lobo_deaf>
+  
+  <afflictionname.lobo_blind>Туннельный эффект</afflictionname.lobo_blind>
+  
+  <afflictionname.lobo_constantpain>Фибромиалгия</afflictionname.lobo_constantpain>
+  
+  <afflictionname.lobo_paralysis>Поврежденны моторные функции</afflictionname.lobo_paralysis>
+  
+  <afflictionname.lobo_invertcontrols>Реверсия соматического нерва</afflictionname.lobo_invertcontrols>
+  
+  <afflictionname.lobo_nausea>Головокружение</afflictionname.lobo_nausea>
+  
+  <afflictionname.lobo_alwaysvigorous>Мания</afflictionname.lobo_alwaysvigorous>
+  
+  <afflictionname.lobo_alwaysjolly>Синдром Уильямса</afflictionname.lobo_alwaysjolly>
+  
+  <afflictionname.lobo_differentteam>Психопатия</afflictionname.lobo_differentteam>
+  
+  <afflictionname.lobo_veryslow>Ненормальная походка</afflictionname.lobo_veryslow>
+  
+  <afflictionname.lobo_alwaysrun>Гиперактивность</afflictionname.lobo_alwaysrun>
+  
+  <afflictionname.lobo_randomarrest>Аномальное взаимодействие мозга и легких</afflictionname.lobo_randomarrest>
+  
+  <afflictionname.lobo_makescreams>Синдром Туретта</afflictionname.lobo_makescreams>
+  
+  <afflictionname.lobo_fart>Недержание газов</afflictionname.lobo_fart>
+  
+  <afflictionname.lobo_randomuncon>Нарколепсия</afflictionname.lobo_randomuncon>
+  
+  <afflictionname.lobo_noanalgesia>Повышенная устойчивость к опиоидам</afflictionname.lobo_noanalgesia>
+  
+  <afflictionname.lobo_durden>Вы НЕ говорите о лоботомии.</afflictionname.lobo_durden>
+  
+  <!-- Good afflictions -->
+  <afflictionname.lobo_genius>Гений</afflictionname.lobo_genius>
+  
+  <afflictionname.lobo_veryfast>Гиперкинетическое расстройство движений</afflictionname.lobo_veryfast>
+  
+  <afflictionname.lobo_notrauma>Десенсибилизация</afflictionname.lobo_notrauma>
+  
+  <afflictionname.lobo_nopsychosis>Повышенная психическая устойчивость</afflictionname.lobo_nopsychosis>
+  
+  <afflictionname.lobo_nostun>Сопротивление оглушению</afflictionname.lobo_nostun>
+  
+  <afflictionname.lobo_nopain>Врожденная анальгезия</afflictionname.lobo_nopain>
+  
+  <afflictionname.lobo_noneurotrauma>Ускоренная регенерация головного мозга</afflictionname.lobo_noneurotrauma>
+  
+  <afflictionname.lobo_nodrunk>Повышенная устойчивость к алкоголю</afflictionname.lobo_nodrunk>
+
+</infotexts>

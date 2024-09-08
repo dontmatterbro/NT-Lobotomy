@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Lobotomy" modversion="1.0.0h2" corepackage="False" steamworkshopid="3326291860" gameversion="1.5.9.2">
+<contentpackage name="NT Lobotomy" modversion="1.0.1" corepackage="False" steamworkshopid="3326291860" gameversion="1.5.9.2">
   <Afflictions file="%ModDir%/Xml/afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English.xml" />
+  <Text file="%ModDir%/Localization/Russian.xml" />
   <Other file="%ModDir%/Sounds/scream_female_1.ogg" />
   <Other file="%ModDir%/Sounds/scream_female_2.ogg" />
   <Other file="%ModDir%/Sounds/scream_male_1.ogg" />
@@ -22,7 +23,7 @@
   <Other file="%ModDir%/Sounds/ethanol3.ogg" />
   <Other file="%ModDir%/Sounds/sticky1.ogg" />
   <Other file="%ModDir%/Sounds/sticky2.ogg" />
-  <Other file="%ModDir%/Sounds/aorta.ogg" />
+  <Other file="%ModDir%/Sounds/explode.ogg" />
   <Other file="%ModDir%/Textures/SpriteSheet.png" />
   <Other file="%ModDir%/Textures/Overlays/durden1.png" />
   <Other file="%ModDir%/Textures/Overlays/durden2.png" />
