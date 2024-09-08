@@ -184,9 +184,7 @@ Hook.Add("nerveregen", function(effect, deltaTime, item, targets, worldPosition,
 			and not HF.HasAffliction(targetCharacter, "lobotomy")
 		then
 			targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("nervegeneration", 1000)
-			--Timer.Wait(function()
-				HF.AddAfflictionLimb(targetCharacter, "nervedeath", 11, 1)
-			--end, 5000)
+			HF.AddAfflictionLimb(targetCharacter, "nervedeath", 11, 1)
 		end
 	end
 
