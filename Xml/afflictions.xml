@@ -111,8 +111,9 @@
 	<Effect minstrength="5" maxstrength="10"/>
   </Affliction>
   
-  <Affliction name="" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomy" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomy" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="true" iconcolors="255,0,0,255;255,0,0,255">
-    <Effect minstrength="0" maxstrength="2" minvitalitydecrease="0.0" maxvitalitydecrease="1000" />
+  <Affliction name="" identifier="lobotomydeath" causeofdeathdescription="afflictioncauseofdeath.lobotomydeath" selfcauseofdeathdescription="afflictioncauseofdeathself.lobotomydeath" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" showinhealthscannerthreshold="100" healableinmedicalclinic="false" isbuff="false" iconcolors="255,0,0,255;255,0,0,255">
+    <icon texture="%ModDir%/Textures/SpriteSheet.png" sourcerect="256,0,128,128" origin="0,0" />
+	<Effect minstrength="0" maxstrength="2" minvitalitydecrease="0.0" maxvitalitydecrease="1000" />
   </Affliction>
   
 			<!-- Lobotomy effect afflictions -->

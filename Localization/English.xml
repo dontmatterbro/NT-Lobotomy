@@ -12,8 +12,8 @@
   <entitydescription.nervegenerators>A compound used to regenerate dead brain tissue and restore brain function.</entitydescription.nervegenerators>
  
 	<!-- Other -->
-  <afflictioncauseofdeath.lobotomy>Lobotomized to death.</afflictioncauseofdeath.lobotomy>  
-  <afflictioncauseofdeathself.lobotomy>You got lobotomized to death.</afflictioncauseofdeathself.lobotomy>  
+  <afflictioncauseofdeath.lobotomydeath>Lobotomized to death.</afflictioncauseofdeath.lobotomydeath>  
+  <afflictioncauseofdeathself.lobotomydeath>You got lobotomized to death.</afflictioncauseofdeathself.lobotomydeath>  
   
   <afflictioncauseofdeath.lobo_paralysis>Couldn't stand the hardships of life.</afflictioncauseofdeath.lobo_paralysis> 
   <afflictioncauseofdeathself.lobo_paralysis>You couldn't stand the hardships of life...</afflictioncauseofdeathself.lobo_paralysis>
@@ -26,7 +26,10 @@
 
 	<!-- Afflictions -->
   <afflictionname.lobotomy>Lobotomized</afflictionname.lobotomy>
-  <afflictiondescription.lobotomy>The patient has been lobotomized.</afflictiondescription.lobotomy> 
+  <afflictiondescription.lobotomy>The patient has been lobotomized.</afflictiondescription.lobotomy>   
+  
+  <afflictionname.lobotomydeath>Total Cerebral Destruction</afflictionname.lobotomydeath>
+  <afflictiondescription.lobotomydeath>The brain has been vitally damaged and cannot sustain its functions.</afflictiondescription.lobotomydeath> 
 
   <afflictionname.orbitoclastready>Orbitoclast Placed</afflictionname.orbitoclastready>
   <afflictiondescription.orbitoclastready>An orbitoclast has been placed into patients eye socket.</afflictiondescription.orbitoclastready> 
