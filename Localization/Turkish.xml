@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+
+	<!-- Items -->
+  <entityname.orbitoclast>Orbitoklast</entityname.orbitoclast>
+  <entitydescription.orbitoclast>Transorbital lobotomilerde kullanılan cerrahi bir araç.</entitydescription.orbitoclast>  
+  
+  <entityname.surgicalhammer>Cerrahi çekiç</entityname.surgicalhammer>
+  <entitydescription.surgicalhammer>Orbitoklastı göz çukurundan beyine ittirmekte kullanılan fiyakalı bir çekiç.</entitydescription.surgicalhammer>
+  
+  <entityname.nervegenerators>Beyin onarım bileşiği</entityname.nervegenerators>
+  <entitydescription.nervegenerators>Ölü beyin dokularını onarmak ve kaybedilen beyin fonksiyonlarını geri kazanmak için kullanılan bir bileşik.</entitydescription.nervegenerators>
+	
+	<!-- Other -->
+  <afflictioncauseofdeath.lobotomydeath>Lobotomiden öldü.</afflictioncauseofdeath.lobotomydeath>  
+  <afflictioncauseofdeathself.lobotomydeath>Lobotomiden öldün.</afflictioncauseofdeathself.lobotomydeath>   
+	
+  <afflictioncauseofdeath.headexplode>Kafatası basıncından kafası patladı.</afflictioncauseofdeath.headexplode>  
+  <afflictioncauseofdeathself.headexplode>Kafatası basıncından dolayı patladın.</afflictioncauseofdeathself.headexplode>  
+ 
+  <afflictioncauseofdeath.lobo_paralysis>Hayatın zorluklarını kaldıramadı.</afflictioncauseofdeath.lobo_paralysis> 
+  <afflictioncauseofdeathself.lobo_paralysis>Hayatın zorluklarını kaldıramadın...</afflictioncauseofdeathself.lobo_paralysis>
+
+  <loadingscreentip>Arka arkaya yapılan lobotomi ameliyatları ortaya beklenmeyen sonuçlar çıkarabilir.</loadingscreentip>
+  <loadingscreentip>Ethanol lobotomilerinin olumlu sonuç verme ihtimali daha yüksektir.</loadingscreentip>
+  <loadingscreentip>Beyin onarım ameliyatı geçiren hastalar ameliyat sonrasında halüsinasyon gördüklerini bildirdi.</loadingscreentip>
+  <loadingscreentip>Orbitoklast deri gericileriyle çıkarabilir.</loadingscreentip>
+
+
+	<!-- Afflictions -->
+  <afflictionname.lobotomy>Lobotomi</afflictionname.lobotomy>
+  <afflictiondescription.lobotomy>Hasta lobotomize edilmiş.</afflictiondescription.lobotomy>   
+  
+  <afflictionname.lobotomydeath>Beyin Ölümü</afflictionname.lobotomydeath>
+  <afflictiondescription.lobotomydeath>Beyin ciddi şekilde hasar almış ve fonksiyonlarını sürdüremiyor.</afflictiondescription.lobotomydeath> 
+
+  <afflictionname.orbitoclastready>Orbitoclast Placed</afflictionname.orbitoclastready>
+  <afflictiondescription.orbitoclastready>An orbitoclast has been placed into patients eye socket.</afflictiondescription.orbitoclastready> 
+
+  <afflictionname.orbitoclastspin>Lobotomization</afflictionname.orbitoclastspin>
+  <afflictiondescription.orbitoclastspin>The patient is being lobotomized.</afflictiondescription.orbitoclastspin>  
+
+  <afflictionname.ethanollobotomy>Ethanol Lobotomization</afflictionname.ethanollobotomy>
+  <afflictiondescription.ethanollobotomy>The patient is being lobotomized with ethanol.</afflictiondescription.ethanollobotomy>  
+
+  <afflictionname.nervegeneration>Nerve Regeneration</afflictionname.nervegeneration>
+  <afflictiondescription.nervegeneration>The patients brain is rapidly regenerating.</afflictiondescription.nervegeneration> 
+
+	<!-- Health scanner afflictions -->
+  <afflictionname.lobo_infinitepsychosis>Protensive psychotic disorder</afflictionname.lobo_infinitepsychosis>
+  
+  <afflictionname.lobo_mute>Mutism</afflictionname.lobo_mute>
+  
+  <afflictionname.lobo_blurredvision>Vision loss</afflictionname.lobo_blurredvision>
+  
+  <afflictionname.lobo_ungenius>Intellectual disability</afflictionname.lobo_ungenius>
+  
+  <afflictionname.lobo_alwaysdrunk>Reduced motor skills</afflictionname.lobo_alwaysdrunk>
+  
+  <afflictionname.lobo_hearscreams>Auditory hallucinations</afflictionname.lobo_hearscreams>
+  
+  <afflictionname.lobo_tinnitus>Tinnitus</afflictionname.lobo_tinnitus>
+  
+  <afflictionname.lobo_screenshake>Virtual earthquake syndrome</afflictionname.lobo_screenshake>
+  
+  <afflictionname.lobo_deaf>Deafness</afflictionname.lobo_deaf>
+  
+  <afflictionname.lobo_blind>Tunnel vision</afflictionname.lobo_blind>
+  
+  <afflictionname.lobo_constantpain>Fibromyalgia</afflictionname.lobo_constantpain>
+  
+  <afflictionname.lobo_paralysis>Severed motor connections</afflictionname.lobo_paralysis>
+  
+  <afflictionname.lobo_invertcontrols>Somatic nerve reversion</afflictionname.lobo_invertcontrols>
+  
+  <afflictionname.lobo_nausea>Vertigo</afflictionname.lobo_nausea>
+  
+  <afflictionname.lobo_alwaysvigorous>Mania</afflictionname.lobo_alwaysvigorous>
+  
+  <afflictionname.lobo_alwaysjolly>Williams syndrome</afflictionname.lobo_alwaysjolly>
+  
+  <afflictionname.lobo_differentteam>Psychopathy</afflictionname.lobo_differentteam>
+  
+  <afflictionname.lobo_veryslow>Abnormal gait</afflictionname.lobo_veryslow>
+  
+  <afflictionname.lobo_alwaysrun>Hyperactivity</afflictionname.lobo_alwaysrun>
+  
+  <afflictionname.lobo_randomarrest>Abnormal brain-lung crosstalk</afflictionname.lobo_randomarrest>
+  
+  <afflictionname.lobo_makescreams>Tourette syndrome</afflictionname.lobo_makescreams>
+  
+  <afflictionname.lobo_fart>Gas incontinence</afflictionname.lobo_fart>
+  
+  <afflictionname.lobo_randomuncon>Narcolepsy</afflictionname.lobo_randomuncon>
+  
+  <afflictionname.lobo_noanalgesia>Heightened opioid resistance</afflictionname.lobo_noanalgesia>
+  
+  <afflictionname.lobo_durden>You do NOT talk about lobotomies</afflictionname.lobo_durden>
+  
+  <!-- Good afflictions -->
+  <afflictionname.lobo_genius>Genius</afflictionname.lobo_genius>
+  
+  <afflictionname.lobo_veryfast>Hyperkinetic movement disorder</afflictionname.lobo_veryfast>
+  
+  <afflictionname.lobo_notrauma>Desensitized</afflictionname.lobo_notrauma>
+  
+  <afflictionname.lobo_nopsychosis>Increased mental resistance</afflictionname.lobo_nopsychosis>
+  
+  <afflictionname.lobo_nostun>Stun resistance</afflictionname.lobo_nostun>
+  
+  <afflictionname.lobo_nopain>Congenital analgesia</afflictionname.lobo_nopain>
+  
+  <afflictionname.lobo_noneurotrauma>Incresed cerebral regeneration</afflictionname.lobo_noneurotrauma>
+  
+  <afflictionname.lobo_nodrunk>Heightened alcohol tolerance</afflictionname.lobo_nodrunk>
+
+</infotexts>

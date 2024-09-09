@@ -200,6 +200,8 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult, prevchance)
 		HF.HasAffliction(targetCharacter, "failedlobotomy")
 	then
 		chance=0.07
+		
+		HF.AddAfflictionLimb(targetCharacter, "cerebralhypoxia", 11, math.random(0,50))
 		targetCharacter.CharacterHealth.ReduceAfflictionOnAllLimbs("failedlobotomy", 1000)
 	end
 	
