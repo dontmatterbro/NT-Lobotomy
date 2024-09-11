@@ -24,8 +24,12 @@
   <Affliction name="" identifier="failedlobotomy" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
   </Affliction>    
   
-  <Affliction name="" identifier="lobo_nervedeathdelay" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+  <Affliction identifier="lobo_nervedeathdelay" limbspecific="true" indicatorlimb="Head" showiconthreshold="1000" maxstrength="2" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
     <Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character">
+			<Conditional IsLocalPlayer="True" />
+			<Sound file="%ModDir%/Sounds/heartbeatloop.ogg" dontmuffle="true" loop="true" volume="100" />
+		</StatusEffect>
 		<StatusEffect target="Character" targetlimbs="Head" delay="10">
 			<Affliction identifier="nervedeath" strength="1" />
 		</StatusEffect>
