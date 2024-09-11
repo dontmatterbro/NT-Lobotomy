@@ -43,7 +43,7 @@
 		</StatusEffect>
 		<StatusEffect target="Character" targetlimb="Head">
 			<Conditional IsLocalPlayer="True" />
-			<Sound file="%ModDir%/Sounds/explode.ogg" dontmuffle="true" />
+			<Sound file="%ModDir%/Sounds/explode.ogg" dontmuffle="true" volume="2" />
 		</StatusEffect>
 	</Effect>    
 	<Effect minstrength="1" maxstrength="2">
