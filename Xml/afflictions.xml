@@ -133,6 +133,9 @@
   
   <Affliction name="" identifier="nervegeneration" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="255,255,255,255;0,255,50,255">
 	<Effect minstrength="0" maxstrength="100" strengthchange="5">
+		<StatusEffect target="Character" ForceRun="false" setvalue="true" >
+			<Conditional nervegeneration="gteq 97" />
+		</StatusEffect>
 		<StatusEffect target="Character" >
 			<Conditional nervegeneration="gteq 99" />
 			<LuaHook name="nerveregen" custom="Character" />
@@ -164,7 +167,7 @@
 			<Conditional nervegeneration="gteq 70" />
 			<Conditional nervegeneration="lteq 75" />
 			<Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="120" camerashakerange="2000" flashrange="500" flashduration="0.10" screencolor="0,255,255,120" screencolorrange="1000" screencolorduration="0.35" />
-        </StatusEffect>		
+        </StatusEffect>
 		<StatusEffect target="Character" targetlimb="Head" comparison="and">
 			<Conditional IsLocalPlayer="True" />
 			<Conditional nervegeneration="gteq 75" />
@@ -276,13 +279,13 @@
   
   <Affliction name="" identifier="lobo_deaf" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
 	<Effect minstrength="0" maxstrength="2">
-		<StatusEffect target="Character" LowPassMultiplier="0" setvalue="true" />
+		<StatusEffect target="Character" LowPassMultiplier="0" priority="10" setvalue="true" />
 	</Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_blind" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
 	<Effect minstrength="0" maxstrength="2">
-		<StatusEffect target="Character" ObstructVisionAmount="0.7" setvalue="true" />
+		<StatusEffect target="Character" ObstructVisionAmount="0.7" priority="10" setvalue="true" />
 	</Effect>
   </Affliction>
   
@@ -325,6 +328,12 @@
 	<Effect minstrength="0" maxstrength="2">
 		<StatusEffect target="Character" ForceRun="true" setvalue="true" />
 	</Effect>
+  </Affliction>  
+  
+  <Affliction name="" identifier="lobo_alwayswalk" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <Effect minstrength="0" maxstrength="2">
+      <AbilityFlag flagtype="MustWalk" />
+    </Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_randomarrest" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -356,7 +365,7 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_randomuncon" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-  </Affliction>    
+  </Affliction>      
   
   <Affliction name="" identifier="lobo_noanalgesia" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
 	<Effect minstrength="0" maxstrength="2" resistancefor="analgesia" minresistance="0" maxresistance="0.8"/> 
@@ -407,7 +416,6 @@
   </Affliction>
   <!-- Durden end -->
   
-  
 		<!-- Good Afflictions -->
   
   <Affliction name="" identifier="lobo_genius" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -431,7 +439,9 @@
   </Affliction>  
   
   <Affliction name="" identifier="lobo_nostun" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
-	<Effect minstrength="0" maxstrength="2" resistancefor="stun" minresistance="0" maxresistance="1"/> 
+	<Effect minstrength="0" maxstrength="2" resistancefor="stun" minresistance="0" maxresistance="1"> 
+		<AbilityFlag flagtype="AlwaysStayConscious" />
+	</Effect>
   </Affliction>   
   
   <Affliction name="" identifier="lobo_nopain" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">

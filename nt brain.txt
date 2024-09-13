@@ -14,6 +14,3 @@ enhance existing brain afflictions
 -seizure?
 -coma
 -concussion
-
-I would make it "NT Neurology" and think a bit bigger, not just focusing on the brain but the nervous-system in general where you can be way more specific than Neurotrauma: Nerve damages (a bit like in real sonar), Intracranial bleeding and Brain hemorrhages (where a Lobotomy would make sense), Migraine after some blunt force trauma (for example) with some cool blurry visuals, Epilepsia, Seizures and syncopes after certain pathologies, Not just having strokes but also Transient ischemic attacks (TIAs), a "milder" form of Strokes if you get help quickly,  maybe even rethinking Spinal cord injuries, and of course the whole Eye-Story like NT Eyes startet with. I think there could be some cool new medical equipment (Electroencephalography (EEG), cerebrospinal fluid diagnostics), and you could even think of integrating some form of neurological infections and inflammations like Meningitis (an inflammation of the membranes of the brain and spinal cord, often caused by infections) and 
-Encephalitis (an inflammation of the brain, usually caused by viruses). I have so many ideas for Neurotrauma and I'm currently working on a NT addon together with Marc and Heelge. I'm a RL Paramedic and Life Guard Instructor and want to share and help with concepts and ideas.

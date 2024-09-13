@@ -83,7 +83,9 @@
   
   <afflictionname.lobo_veryslow>Abnormal gait</afflictionname.lobo_veryslow>
   
-  <afflictionname.lobo_alwaysrun>Hyperactivity</afflictionname.lobo_alwaysrun>
+  <afflictionname.lobo_alwaysrun>Hyperactivity</afflictionname.lobo_alwaysrun>  
+  
+  <afflictionname.lobo_alwaysrun>Hypoactivity</afflictionname.lobo_alwaysrun>
   
   <afflictionname.lobo_randomarrest>Abnormal brain-lung crosstalk</afflictionname.lobo_randomarrest>
   
