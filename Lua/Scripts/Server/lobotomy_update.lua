@@ -24,12 +24,6 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "psychosis", 11, 100)
 	end
 
-	if --mute
-		HF.HasAffliction(targetCharacter, "mute")
-	then
-		targetCharacter.CanSpeak=false
-	end		
-	
 	if --paralysis
 		HF.HasAffliction(targetCharacter, "lobo_paralysis")
 	then
@@ -69,15 +63,7 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 8, 100) --right leg
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 7, 100) --left leg
 	end	
-	
-	if --always run
-		HF.HasAffliction(targetCharacter, "lobo_alwaysrun")
-	then 
-		targetCharacter.ForceRun=true
-	else
-		targetCharacter.ForceRun=false
-	end
-	
+
 end
 
 

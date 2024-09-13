@@ -221,6 +221,9 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_mute" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character" CanSpeak="false" setvalue="true" />
+	</Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_blurredvision" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -272,9 +275,15 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_deaf" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character" LowPassMultiplier="0" setvalue="true" />
+	</Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_blind" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character" ObstructVisionAmount="0.7" setvalue="true" />
+	</Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_constantpain" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
@@ -313,6 +322,9 @@
   </Affliction>
   
   <Affliction name="" identifier="lobo_alwaysrun" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+	<Effect minstrength="0" maxstrength="2">
+		<StatusEffect target="Character" ForceRun="true" setvalue="true" />
+	</Effect>
   </Affliction>
   
   <Affliction name="" identifier="lobo_randomarrest" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
