@@ -57,7 +57,7 @@
   
   <afflictionname.lobo_alwaysdrunk>Reduced motor skills</afflictionname.lobo_alwaysdrunk>
   
-  <afflictionname.lobo_hearscreams>Auditory hallucinations</afflictionname.lobo_hearscreams>
+  <afflictionname.lobo_hearscreams>Severe auditory hallucinations</afflictionname.lobo_hearscreams>
   
   <afflictionname.lobo_tinnitus>Tinnitus</afflictionname.lobo_tinnitus>
   
@@ -98,6 +98,8 @@
   <afflictionname.lobo_noanalgesia>Heightened opioid resistance</afflictionname.lobo_noanalgesia>
   
   <afflictionname.lobo_durden>You do NOT talk about lobotomies</afflictionname.lobo_durden>
+  
+  <afflictionname.lobo_hearvoices>Auditory hallucinations</afflictionname.lobo_hearvoices>
   
   <!-- Good afflictions -->
   <afflictionname.lobo_genius>Genius</afflictionname.lobo_genius>

@@ -415,6 +415,15 @@
     <AfflictionOverlay texture="%ModDir%/Textures/Overlays/durden4.png" />
   </Affliction>
   <!-- Durden end -->
+
+  <Affliction name="" identifier="lobo_hearvoices" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" maxstrength="2" showinhealthscannerthreshold="0" healableinmedicalclinic="false" iconcolors="255,80,0,255;255,80,0,255">
+    <PeriodicEffect mininterval="30" maxinterval="100">
+      <StatusEffect target="Character" duration="15">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="%ModDir%/Sounds/insanityambient.ogg" dontmuffle="true" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>  
   
 		<!-- Good Afflictions -->
   
