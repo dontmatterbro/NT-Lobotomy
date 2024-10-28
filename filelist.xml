@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Lobotomy" modversion="1.0.1h2" corepackage="False" steamworkshopid="3326291860" gameversion="1.5.9.2">
+<contentpackage name="NT Lobotomy" modversion="1.0.1h3" corepackage="False" steamworkshopid="3326291860" gameversion="1.6.18.1">
   <Afflictions file="%ModDir%/Xml/afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English.xml" />

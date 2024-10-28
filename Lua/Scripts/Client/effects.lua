@@ -19,7 +19,7 @@ function NTLOBO.UpdateClientEffect()
 	if Character.Controlled==nil then return end
 
 	if --different team
-		HF.HasAffliction(Character.Controlled, "lobo_differentteam") and Game.IsMultiplayer
+		HF.HasAffliction(Character.Controlled, "lobo_differentteam") and Game.IsMultiplayer and not (LuaUserData.IsTargetType(Game.GameSession.GameMode, "Barotrauma.PvPMode"))
 	then
 		Character.Controlled.TeamID=2 
 	else
