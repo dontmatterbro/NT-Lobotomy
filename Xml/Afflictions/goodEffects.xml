@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+    <!-- Good Afflictions -->
+    <Affliction
+        identifier="lobo_genius"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minskillmultiplier="0"
+            maxskillmultiplier="2" />
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_veryfast"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minspeedmultiplier="1.0"
+            maxspeedmultiplier="1.35" />
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_notrauma"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="traumaticshock"
+            minresistance="0"
+            maxresistance="1">
+            <StatusEffect
+                target="Character"
+                interval="6"
+                disabledeltatime="true">
+                <ReduceAffliction
+                    identifier="traumaticshock"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_nopsychosis"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="psychosis"
+            minresistance="0"
+            maxresistance="1" />
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_nostun"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="stun"
+            minresistance="0"
+            maxresistance="1">
+            <AbilityFlag
+                flagtype="AlwaysStayConscious" />
+        </Effect>
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_nopain"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <ReduceAffliction
+                    type="pain"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_noneurotrauma"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <ReduceAffliction
+                    identifier="cerebralhypoxia"
+                    amount="1" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <Affliction
+        identifier="lobo_nodrunk"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="drunk"
+            minresistance="0"
+            maxresistance="1" />
+    </Affliction>
+</Afflictions>
