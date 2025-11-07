@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+    <!-- Lobotomy effect afflictions -->
+    <!-- Bad Afflictions -->
+    <!-- Protensive psychotic disorder -->
+    <Affliction
+        identifier="lobo_infinitepsychosis"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Mutism -->
+    <Affliction
+        identifier="lobo_mute"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                CanSpeak="false"
+                setvalue="true" />
+        </Effect>
+    </Affliction>
+
+    <!-- Vision loss -->
+    <Affliction
+        identifier="lobo_blurredvision"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minscreenblur="0.0"
+            maxscreenblur="0.7" />
+    </Affliction>
+
+    <!-- Intellectual disability -->
+    <Affliction
+        identifier="lobo_ungenius"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minskillmultiplier="1"
+            maxskillmultiplier="0.5" />
+    </Affliction>
+
+    <!-- Reduced motor skills -->
+    <Affliction
+        identifier="lobo_alwaysdrunk"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <TriggerAnimation
+                    Type="Walk"
+                    filename="DrunkenWalk"
+                    priority="6"
+                    ExpectedSpecies="Human" />
+                <TriggerAnimation
+                    Type="Run"
+                    filename="DrunkenRun"
+                    priority="6"
+                    ExpectedSpecies="Human" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Severe auditory hallucinations -->
+    <Affliction
+        identifier="lobo_hearscreams"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <PeriodicEffect
+            mininterval="10"
+            maxinterval="40">
+            <StatusEffect
+                target="Character"
+                duration="5">
+                <Conditional
+                    IsLocalPlayer="True" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_female_1.ogg"
+                    dontmuffle="true" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_female_2.ogg"
+                    dontmuffle="true" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_1.ogg"
+                    dontmuffle="true" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_2.ogg"
+                    dontmuffle="true" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_3.ogg"
+                    dontmuffle="true" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Tinnitus -->
+    <Affliction
+        identifier="lobo_tinnitus"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                duration="5">
+                <Conditional
+                    IsLocalPlayer="True" />
+                <Sound
+                    file="%ModDir%/Sounds/tinnitus.ogg"
+                    loop="true"
+                    volume="0.5"
+                    dontmuffle="true" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Virtual earthquake syndrome -->
+    <Affliction
+        identifier="lobo_screenshake"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <PeriodicEffect
+            mininterval="10"
+            maxinterval="35">
+            <StatusEffect
+                target="Character"
+                targetlimb="Head">
+                <Conditional
+                    IsLocalPlayer="True" />
+                <Explosion
+                    range="1"
+                    force="0"
+                    smoke="false"
+                    sparks="false"
+                    flames="false"
+                    shockwave="false"
+                    underwaterbubble="false"
+                    camerashake="50"
+                    camerashakerange="500" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Deafness -->
+    <Affliction
+        identifier="lobo_deaf"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                LowPassMultiplier="0"
+                priority="10"
+                setvalue="true" />
+        </Effect>
+    </Affliction>
+
+    <!-- Tunnel vision -->
+    <Affliction
+        identifier="lobo_blind"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                ObstructVisionAmount="0.9"
+                priority="10"
+                setvalue="true" />
+        </Effect>
+    </Affliction>
+
+    <!-- Fibromyalgia -->
+    <Affliction
+        identifier="lobo_constantpain"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Severed motor connections -->
+    <Affliction
+        identifier="lobo_paralysis"
+        causeofdeathdescription="afflictioncauseofdeath.lobo_paralysis"
+        selfcauseofdeathdescription="afflictioncauseofdeathself.lobo_paralysis"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Somatic nerve reversion -->
+    <Affliction
+        identifier="lobo_invertcontrols"
+        type="invertcontrols"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Vertigo -->
+    <Affliction
+        identifier="lobo_nausea"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Mania -->
+    <Affliction
+        identifier="lobo_alwaysvigorous"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <TriggerAnimation
+                    Type="Walk"
+                    filename="VigorousWalk"
+                    priority="6"
+                    ExpectedSpecies="Human" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Neurological williams syndrome -->
+    <Affliction
+        identifier="lobo_alwaysjolly"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <TriggerAnimation
+                    Type="Walk"
+                    filename="JollyWalk"
+                    priority="6"
+                    ExpectedSpecies="Human" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Abnormal gait -->
+    <Affliction
+        identifier="lobo_veryslow"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minspeedmultiplier="1.0"
+            maxspeedmultiplier="0.65" />
+    </Affliction>
+
+    <!-- Hyperactivity -->
+    <Affliction
+        identifier="lobo_alwaysrun"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                ForceRun="true"
+                setvalue="true" />
+        </Effect>
+    </Affliction>
+
+    <!-- Hypoactivity -->
+    <Affliction
+        identifier="lobo_alwayswalk"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <AbilityFlag
+                flagtype="MustWalk" />
+        </Effect>
+    </Affliction>
+
+    <!-- Abnormal brain-lung crosstalk -->
+    <Affliction
+        identifier="lobo_randomarrest"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Tourette syndrome -->
+    <Affliction
+        identifier="lobo_makescreams"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <PeriodicEffect
+            mininterval="10"
+            maxinterval="25">
+            <StatusEffect
+                target="Character"
+                duration="5">
+                <Conditional
+                    hasspecifiertag="female" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_female_1.ogg" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_female_2.ogg" />
+            </StatusEffect>
+            <StatusEffect
+                target="Character"
+                duration="30">
+                <Conditional
+                    hasspecifiertag="male" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_1.ogg" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_2.ogg" />
+
+                <Sound
+                    file="%ModDir%/Sounds/scream_male_3.ogg" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Gas incontinence -->
+    <Affliction
+        identifier="lobo_fart"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <PeriodicEffect
+            mininterval="10"
+            maxinterval="25">
+            <StatusEffect
+                target="Character"
+                duration="3">
+                <Sound
+                    file="%ModDir%/Sounds/fart1.ogg" />
+                <Sound
+                    file="%ModDir%/Sounds/fart2.ogg" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Narcolepsy -->
+    <Affliction
+        identifier="lobo_randomuncon"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255" />
+
+    <!-- Heightened opioid resistance -->
+    <Affliction
+        identifier="lobo_noanalgesia"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="analgesia"
+            minresistance="0.8"
+            maxresistance="0.8" />
+    </Affliction>
+
+    <!-- You do NOT talk about lobotomies -->
+    <Affliction
+        identifier="lobo_durden"
+        showiconthreshold="1000"
+        showinhealthscannerthreshold="1000"
+        maxstrength="2">
+        <PeriodicEffect
+            mininterval="10"
+            maxinterval="170">
+            <StatusEffect
+                target="Character">
+                <Affliction
+                    identifier="lobo_durden1"
+                    strength="100" />
+            </StatusEffect>
+        </PeriodicEffect>
+
+        <PeriodicEffect
+            mininterval="20"
+            maxinterval="190">
+            <StatusEffect
+                target="Character">
+                <Affliction
+                    identifier="lobo_durden2"
+                    strength="100" />
+            </StatusEffect>
+        </PeriodicEffect>
+
+        <PeriodicEffect
+            mininterval="30"
+            maxinterval="210">
+            <StatusEffect
+                target="Character">
+                <Affliction
+                    identifier="lobo_durden3"
+                    strength="100" />
+            </StatusEffect>
+        </PeriodicEffect>
+
+        <PeriodicEffect
+            mininterval="40"
+            maxinterval="230">
+            <StatusEffect
+                target="Character">
+                <Affliction
+                    identifier="lobo_durden4"
+                    strength="100" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Durden Image 1 -->
+    <Affliction
+        identifier="lobo_durden1"
+        showiconthreshold="1000"
+        showinhealthscannerthreshold="1000"
+        maxstrength="100">
+        <Effect
+            minstrength="0"
+            maxstrength="100"
+            strengthchange="-300" />
+        <AfflictionOverlay
+            texture="%ModDir%/Textures/Overlays/durden1.png" />
+    </Affliction>
+
+    <!-- Durden Image 2 -->
+    <Affliction
+        identifier="lobo_durden2"
+        showiconthreshold="1000"
+        showinhealthscannerthreshold="1000"
+        maxstrength="100">
+        <Effect
+            minstrength="0"
+            maxstrength="100"
+            strengthchange="-300" />
+        <AfflictionOverlay
+            texture="%ModDir%/Textures/Overlays/durden2.png" />
+    </Affliction>
+
+    <!-- Durden Image 3 -->
+    <Affliction
+        identifier="lobo_durden3"
+        showiconthreshold="1000"
+        showinhealthscannerthreshold="1000"
+        maxstrength="100">
+        <Effect
+            minstrength="0"
+            maxstrength="100"
+            strengthchange="-300" />
+        <AfflictionOverlay
+            texture="%ModDir%/Textures/Overlays/durden3.png" />
+    </Affliction>
+
+    <!-- Durden Image 4 -->
+    <Affliction
+        identifier="lobo_durden4"
+        showiconthreshold="1000"
+        showinhealthscannerthreshold="1000"
+        maxstrength="100">
+        <Effect
+            minstrength="0"
+            maxstrength="100"
+            strengthchange="-300" />
+        <AfflictionOverlay
+            texture="%ModDir%/Textures/Overlays/durden4.png" />
+    </Affliction>
+
+    <!-- Auditory hallucinations -->
+    <Affliction
+        identifier="lobo_hearvoices"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <PeriodicEffect
+            mininterval="30"
+            maxinterval="100">
+            <StatusEffect
+                target="Character"
+                duration="15">
+                <Conditional
+                    IsLocalPlayer="True" />
+                <Sound
+                    file="%ModDir%/Sounds/insanityambient.ogg"
+                    dontmuffle="true" />
+            </StatusEffect>
+        </PeriodicEffect>
+    </Affliction>
+
+    <!-- Good Afflictions -->
+    <!-- Genius -->
+    <Affliction
+        identifier="lobo_genius"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minskillmultiplier="2"
+            maxskillmultiplier="2" />
+    </Affliction>
+
+    <!-- Hyperkinetic movement disorder -->
+    <Affliction
+        identifier="lobo_veryfast"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            minspeedmultiplier="1.35"
+            maxspeedmultiplier="1.35" />
+    </Affliction>
+
+    <!-- Desentized -->
+    <Affliction
+        identifier="lobo_notrauma"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="traumaticshock"
+            minresistance="0"
+            maxresistance="1">
+            <StatusEffect
+                target="Character"
+                interval="6"
+                disabledeltatime="true">
+                <ReduceAffliction
+                    identifier="traumaticshock"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Increased psychological potence -->
+    <Affliction
+        identifier="lobo_nopsychosis"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="psychosis"
+            minresistance="1"
+            maxresistance="1" />
+    </Affliction>
+
+    <!-- Stun resistance -->
+    <Affliction
+        identifier="lobo_nostun"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="stun"
+            minresistance="1"
+            maxresistance="1">
+            <AbilityFlag
+                flagtype="AlwaysStayConscious" />
+        </Effect>
+    </Affliction>
+
+    <!-- Congenital analgesia -->
+    <Affliction
+        identifier="lobo_nopain"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <ReduceAffliction
+                    type="pain"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Increased cerebral regeneration -->
+    <Affliction
+        identifier="lobo_noneurotrauma"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character">
+                <ReduceAffliction
+                    identifier="cerebralhypoxia"
+                    amount="1" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
+
+    <!-- Heightened alcohol tolerance -->
+    <Affliction
+        identifier="lobo_nodrunk"
+        limbspecific="true"
+        indicatorlimb="Head"
+        showiconthreshold="100"
+        maxstrength="2"
+        showinhealthscannerthreshold="0"
+        healableinmedicalclinic="false"
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2"
+            resistancefor="drunk"
+            minresistance="1"
+            maxresistance="1" />
+    </Affliction>
+</Afflictions>

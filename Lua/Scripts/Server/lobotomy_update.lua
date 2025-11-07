@@ -1,19 +1,3 @@
-NTLOBO.UpdateCooldown = 0
-NTLOBO.UpdateInterval = 120
-NTLOBO.Deltatime = NTLOBO.UpdateInterval/60 -- Time in seconds that transpires between updates
-
--- This Hook triggers NTLOBO.Update function.
-Hook.Add("think", "NTLOBO.Update", function()
-    if HF.GameIsPaused() or (not Level.Loaded) then return end
-
-    NTLOBO.UpdateCooldown = NTLOBO.UpdateCooldown-1
-    if (NTLOBO.UpdateCooldown <= 0) then
-        NTLOBO.UpdateCooldown = NTLOBO.UpdateInterval
-        NTLOBO.Update() 
-    end
-end)
-
-
 function NTLOBO.UpdateLobotomy(targetCharacter)
 
 -------------------------------------------EFFECT AFFLICTIONS-----------------------------------------------------------
@@ -64,34 +48,4 @@ function NTLOBO.UpdateLobotomy(targetCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 7, 100) --left leg
 	end	
 
-end
-
-
--- Gets to run once every two seconds
-function NTLOBO.Update()
-	--print("eyeupdatetest")
-		local updateHuman = {}
-		local amountHuman = 0
-		
-		
-	--fetch character for update
-	for key, character in pairs(Character.CharacterList) do
-		if not character.IsDead then
-			if character.IsHuman and HF.HasAffliction(character, "lobotomy") then
-				table.insert(updateHuman, character)
-				amountHuman = amountHuman + 1
-			end
-		end
-	end
-	
-	--spread the characters out over the duration of an update so that the load isnt done all at once
-    for key, value in pairs(updateHuman) do
-        -- make sure theyre still alive and human
-        if (value ~= nil and not value.Removed and value.IsHuman and not value.IsDead) then
-            Timer.Wait(function ()
-                if (value ~= nil and not value.Removed and value.IsHuman and not value.IsDead) then
-                NTLOBO.UpdateLobotomy(value) end
-            end, ((key + 1) / amountHuman) * NTLOBO.Deltatime * 1000)
-        end
-    end
 end

@@ -1,0 +1,13 @@
+--bugs--
+fix orbitoclast disappearing when patient dies with orbitoclastinserted
+fix broken lobotomy outcomes
+
+--refactor--
+change affliction and item names
+switch lua code to xml
+rewrite lua surgery code
+
+--general fixes--
+improve item xml code
+improve affliction xml code
+redo durden images
