@@ -112,7 +112,7 @@ Hook.Add("item.applyTreatment", "NTLOBO.itemused", function(item, usingCharacter
 			HF.AddAfflictionLimb(targetCharacter, "failedlobotomy", 11, 2)
 
 			if NTEYE ~= nil then
-				HF.AddAfflictionLimb(targetCharacter, "eyedamage", 11, math.random(10, 20))
+				NTEYE.DamageEye(targetCharacter, math.random(10, 20), nil)
 			end
 		end
 
@@ -287,4 +287,3 @@ function NTLOBO.ApplyLobotomy(targetCharacter, prevresult, prevchance)
 end
 
 function NTLOBO.Robot() end --gets overwritten when robotrauma is active
-
