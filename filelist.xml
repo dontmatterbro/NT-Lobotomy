@@ -22,6 +22,9 @@
 
     <Text
         file="%ModDir%/Localization/Turkish.xml" />
+    
+    <Text
+        file="%ModDir%/Localization/Portuguese.xml" />
 
     <Other
         file="%ModDir%/Sounds/scream_female_1.ogg" />
