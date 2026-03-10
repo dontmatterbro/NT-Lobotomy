@@ -11,7 +11,20 @@
         maxstrength="2"
         showinhealthscannerthreshold="0"
         healableinmedicalclinic="false"
-        iconcolors="255,80,0,255;255,80,0,255" />
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                interval="1"
+                disabledeltatime="true">
+                <Affliction
+                    identifier="psychosis"
+                    amount="10" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
 
     <!-- Mutism -->
     <Affliction
@@ -261,7 +274,20 @@
         maxstrength="2"
         showinhealthscannerthreshold="0"
         healableinmedicalclinic="false"
-        iconcolors="255,80,0,255;255,80,0,255" />
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                interval="1"
+                disabledeltatime="true">
+                <Affliction
+                    identifier="givein"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
 
     <!-- Somatic nerve reversion -->
     <Affliction
@@ -284,7 +310,20 @@
         maxstrength="2"
         showinhealthscannerthreshold="0"
         healableinmedicalclinic="false"
-        iconcolors="255,80,0,255;255,80,0,255" />
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                interval="2"
+                disabledeltatime="true">
+                <Affliction
+                    identifier="nausea"
+                    amount="10" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
 
     <!-- Mania -->
     <Affliction
@@ -398,7 +437,20 @@
         maxstrength="2"
         showinhealthscannerthreshold="0"
         healableinmedicalclinic="false"
-        iconcolors="255,80,0,255;255,80,0,255" />
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                interval="1"
+                disabledeltatime="true">
+                <Affliction
+                    identifier="respiratoryarrest"
+                    amount="10" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
 
     <!-- Tourette syndrome -->
     <Affliction
@@ -476,7 +528,20 @@
         maxstrength="2"
         showinhealthscannerthreshold="0"
         healableinmedicalclinic="false"
-        iconcolors="255,80,0,255;255,80,0,255" />
+        iconcolors="255,80,0,255;255,80,0,255">
+        <Effect
+            minstrength="0"
+            maxstrength="2">
+            <StatusEffect
+                target="Character"
+                interval="1"
+                disabledeltatime="true">
+                <Affliction
+                    identifier="sym_unconsciousness"
+                    amount="100" />
+            </StatusEffect>
+        </Effect>
+    </Affliction>
 
     <!-- Heightened opioid resistance -->
     <Affliction

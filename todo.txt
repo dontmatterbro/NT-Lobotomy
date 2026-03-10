@@ -11,3 +11,11 @@ rewrite lua surgery code
 improve item xml code
 improve affliction xml code
 redo durden images
+
+--check--
+whether lobo_paralysis works or not, changed from Lua to XML
+add chance to lobo_nausea, make it 20%
+add chance to lobo_randomarrest, make it 30%
+add chance to lobo_randomuncon make it 5%
+
+switch lobo_alwaysinpain to Lua
